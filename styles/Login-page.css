@@ -10,13 +10,14 @@ body{
 .hearder{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     width: 735px;
     position: fixed;
     top: 0;
     bottom: 0;
     align-items: center;
-    margin-top: 150px;
-    margin-bottom: 150px;
+    margin-bottom: 250px;
+    box-shadow: 0px 0px 5px rgba;
 }
 .top-section{
     display: flex;
@@ -32,21 +33,27 @@ body{
     font-size: 24px;
     font-weight: 550;
 }
-.email-box{
+.search-bar{
+    flex: 1;
     width: 432.400px;
+    min-width: 50px;
     height: 23px;
     padding: 12px 12px 12px 8px;
     border: 0.8px solid rgb(222, 222, 222);
     border-radius: 4px;
     margin-top: 40px;
+    transition: 0.15s;
 }
-.email-box::placeholder{
+.search-bar::placeholder{
     padding: 8px;
     font-size: 15px;
     color:rgb(170, 170, 170) ;
 }
-.email-box:focus{
-    border-color: blue;
+.search-bar:focus{
+    font-size: 15px;
+    border-color: rgb(103, 120, 228);  /* Change border color */
+    box-shadow: 0 0 5px rgba(77, 100, 255, 0.2); /* Add a shadow effect */
+    outline: none;
 }
 .bottom-section{
     display: flex;
@@ -66,4 +73,20 @@ body{
     font-weight: bold;
     vertical-align: middle;
     border-radius: 4px;
+    cursor: not-allowed;
+}
+.signup-section
+{
+    margin-top: 30px;
+    width: 406px;
+    height: 21px;
+    display: flex;
+    justify-content: center;
+    padding: 8px 24px 8px 24px;
+    font-size: 14px;
+}
+.signup-link{
+    text-decoration: none;
+    font-weight: 401;
+    color: rgb(77, 100, 255);
 }
