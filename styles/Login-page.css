@@ -16,7 +16,7 @@ body{
     top: 0;
     bottom: 0;
     align-items: center;
-    margin-bottom: 250px;
+    margin-bottom: 200px;
     box-shadow: 0px 0px 5px rgba;
 }
 .top-section{
@@ -37,7 +37,8 @@ body{
     flex: 1;
     width: 432.400px;
     min-width: 50px;
-    height: 23px;
+    height: 29px;
+    font-size: 16px;
     padding: 12px 12px 12px 8px;
     border: 0.8px solid rgb(222, 222, 222);
     border-radius: 4px;
@@ -46,7 +47,7 @@ body{
 }
 .search-bar::placeholder{
     padding: 8px;
-    font-size: 15px;
+    font-size: 16px;
     color:rgb(170, 170, 170) ;
 }
 .search-bar:focus{
@@ -90,3 +91,9 @@ body{
     font-weight: 401;
     color: rgb(77, 100, 255);
 }
+
+/* @media (max-width:880px) {
+    .search-bar{
+        width: 400px;
+    } 
+} */
