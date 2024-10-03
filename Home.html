@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <div class="side-bar">
@@ -26,7 +27,55 @@
         <img class="home-icon" src="./assets/Icons/Home-Icon.webp" alt="">
         <span class="home-title">Home</span>
       </div>
+      <div class="Analytics-icon-container">
+        <img class="Analytics-icon" src="./assets/Icons/data-analytics.png" alt="">
+        <span class="Analytics-title">Analytics</span>
+      </div>
+      <div class="transactions-icon-container">
+        <img class="transactions-icon" src="./assets/Icons/transaction-icon.png" alt="">
+        <span class="transactions-title">Transactions</span>
+      </div>
+      <div class="Account-icon-container">
+        <img class="Account-icon" src="./assets/Icons/account-icon.png" alt="">
+        <span class="Account-title">Account</span>
+      </div>
     </div>
   </div>
+  <div class="top-bar">
+    <div class="right-section">
+      <div class="user-details">
+        <div>
+          <img class="user-dp" src="./assets/Cashew-icon-small.png" alt="">
+        </div>
+        <span class="username">Challa Venkata Bhavani Sankar</span>
+      </div>
+    </div>
+  </div>
+  <div class="upper-section">
+    <div class="greetings-section">
+      <span class="welcome-note">Welcome,</span>
+      <span class="username">Challa Venkata Bhavani Sankar</span>
+    </div>
+    <div class="balances-container">
+      <div class="acc-balance">
+        <span class="acc-name">HDFC</span>
+        <span>₹2,004 INR</span>
+        <span class="transactions-count">34 transactions</span>
+      </div>
+      <div class="acc-balance">
+        <span class="acc-name">SBI</span>
+        <span>₹32,004 INR</span>
+        <span class="transactions-count">23 transactions</span>
+      </div>
+      <div class="acc-balance">
+        <img class="add-account-icon" src="./assets/Icons/add-account-icon.png" alt="">
+        <span class="transactions-count">Account</span>
+      </div>
+    </div>
+  </div>
+  <div class="graph-container">
+      <canvas id="myChart"></canvas>
+  </div>
+  <script src="./Scripts/Home.js"></script>
 </body>
 </html>

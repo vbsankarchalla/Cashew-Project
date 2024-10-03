@@ -1,6 +1,11 @@
 body{
   font-family: poppins;
+  background-color:rgb(234, 249, 255);
 }
+
+/* Side bar styling */
+
+
 .side-bar{
   position: fixed;
   left: 0;
@@ -8,7 +13,8 @@ body{
   bottom: 0;
   width: 220px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  background-color: rgb(227, 244, 250);
+  background-color: rgb(213, 241, 251);
+  z-index: 10;
 }
 .sidebar-header-container{
   display: flex;
@@ -26,21 +32,167 @@ body{
   font-size: 18px;
   font-weight: bolder;
 }
-.home-icon-container{
-  margin: 2px 8px 2px 8px;
-  padding: 4px;
+.icons-container{
+  display: flex;
+  flex-direction: column;
+}
+.home-icon-container,
+.transactions-icon-container,
+.Account-icon-container,
+.Analytics-icon-container {
+  margin: 4px 8px 10px 4px;
+  padding: 4px 0px 0px 4px;
   display: flex;
   vertical-align: middle;
+  height: 40px;
   background-color: rgb(160, 218, 238);
-  border-radius: 12px;
+  border-radius: 6px;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
 }
-.home-icon{
-  padding: 2px 0px 0px 8px;
+.home-icon {
+  padding: 5px 0px 5px 8px;
   width: 30px;
 }
-.home-title{
-  padding: 4px 0px 0px 8px;
+.Analytics-icon{
+  padding: 5px 0px 5px 12px;
+  width: 22px;
+  height: 22px;
+}
+.transactions-icon{
+  padding: 5px 0px 5px 9px;
+  width: 30px;
+}
+.Account-icon{
+  padding: 5px 0px 7px 13px;
+  width: 22px;
+  height: 20px;
+}
+.home-title {
+  padding: 8px 0px 5px 8px;
   font-family: Afacad+Flux;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
+}
+.Analytics-title{
+  padding: 5px 0px 0px 12px;
+  font-family: Afacad+Flux;
+  font-size: 16px;
+  font-weight: 600;
+}
+.transactions-title {
+  padding: 5px 0px 0px 8px;
+  font-family: Afacad+Flux;
+  font-size: 16px;
+  font-weight: 600;
+}
+.Account-title
+ {
+  padding: 5px 0px 0px 12px;
+  font-family: Afacad+Flux;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+
+/* Top bar styling */
+
+
+
+
+.top-bar{
+  position: fixed;
+  top: 0;
+  left: 220px;
+  right: 0;
+  height: 55px;
+  background-color:rgb(213, 241, 251) ;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+.user-details{
+  display: flex;
+  justify-content: right;
+  vertical-align: middle;
+}
+.user-dp{
+  width: 30px;
+  padding: 8px 4px 8px 8px;
+}
+.username{
+  font-family: Afacad+Flux;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 8px 8px 4px;
+}
+
+
+
+/* DashBord styling */
+
+
+.upper-section{
+  position: fixed;
+  left: 220px;
+  top: 55px;
+}
+.greetings-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  padding: 5px 0px 0px 15px;
+}
+.welcome-note{
+  font-size: 13px;
+  font-weight:500;
+  color: rgb(103, 101, 101);
+}
+.username{
+  font-size: 15px;
+  font-weight:bold;
+}
+.balances-container{
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 15px 15px 30px;
+}
+.acc-balance{
+  display: flex;
+  flex-direction: column;
+  padding: 8px 16px 8px 8px;
+  margin: 0px 16px 0px 0px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+}
+.acc-balance *{
+  padding: 2px;
+  color: rgb(43, 42, 42);
+  font-size: 12px;
+  font-weight: bold;
+}
+.acc-balance:hover{
+  border-color: rgb(160, 218, 238);
+  border-style: solid;
+  transition: 0.15s;
+}
+.acc-name{
+  font-size:15px ;
+}
+.transactions-count{
+  font-weight:400;
+  color: rgb(43, 42, 42);
+}
+.add-account-icon{
+  width: 30px;
+  padding: 5px;
+  color:rgb(43, 42, 42) ;
+}
+.graph-container{
+  position: fixed;
+  left: 220px;
+  top:250px;
+  width: 550px;
+  height: 300px;
+  margin: 10px 10px 10px 30px;
+  padding: 15px 15px 15px 25px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.2);
 }
