@@ -1,6 +1,6 @@
 body{
   font-family: poppins;
-  background-color:rgb(234, 249, 255);
+  background-color:rgba(221, 242, 251, 0.958);
 }
 
 /* Side bar styling */
@@ -13,7 +13,7 @@ body{
   bottom: 0;
   width: 220px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  background-color: rgb(213, 241, 251);
+  background-color: rgba(191, 235, 252, 0.964);
   z-index: 10;
 }
 .sidebar-header-container{
@@ -45,9 +45,9 @@ body{
   display: flex;
   vertical-align: middle;
   height: 40px;
-  background-color: rgb(201, 232, 242); /* rgb(201, 232, 242) */
+  background-color: rgba(221, 242, 251, 0.958); /* rgb(201, 232, 242) */
   border-radius: 6px;
-  box-shadow: 0px 0px 2px rgba(118, 140, 148, 0.704);
+  box-shadow: 0px 0px 1px rgba(118, 140, 148, 0.4);
 }
 
 .home-icon-container:hover,
@@ -120,7 +120,7 @@ body{
   left: 220px;
   right: 0;
   height: 55px;
-  background-color:rgb(213, 241, 251) ;
+  background-color:rgba(191, 235, 252, 0.964) ;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
 .user-details{
@@ -209,24 +209,24 @@ body{
   width: 1218px;
   height: 325px;
   margin: 10px 10px 10px 30px;
-  padding: 15px 15px 15px 25px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.2);
+  padding: 15px 15px 15px 5px;
+  /* border-radius: 10px;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.2); */
 }
 .linechart{
   top: 150px;
-  width: 550px;
-  padding-top: 30px;
+  width: 580px;
+  padding: 15px 15px 15px 15px;
   border-radius: 10px;
-  /* box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1); */
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.2);
 }
 .doughnut-container{
-  width: 600px;
+  width: 580px;
   display: flex;
   position: relative;
   justify-content: space-between;
   border-radius: 10px;
-  /* box-shadow: 0px 0px 40px rgba(247, 63, 63, 0.801); */
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.2);
 }
 .doughnut{
   position: absolute;
@@ -250,10 +250,44 @@ body{
   /* border-radius: 10px;
   box-shadow: 0px 0px 4px rgba(247, 63, 63, 0.801); */
 }
+.legend-pair{
+  display: flex;
+  vertical-align: middle;
+}
+.legend-name{
+  font-size: 12px;
+}
+.legend-head{
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 99, 132, 0.6);
+  border-radius: 6px;
+  border: none;
+  margin-top: 6px;
+  margin-right: 8px;
+}
+.legend-head1{
+  width: 12px;
+  height: 12px;
+  background-color: rgba(54, 162, 235, 0.6);
+  border-radius: 6px;
+  border: none;
+  margin-top: 6px;
+  margin-right: 8px;
+}
+.legend-head2{
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 206, 86, 0.6);
+  border-radius: 6px;
+  border: none;
+  margin-top: 6px;
+  margin-right: 8px;
+}
 .doughnut-category-details{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: left;
   position: absolute;
   bottom: 15px;
   left: 40px;
@@ -262,7 +296,7 @@ body{
   box-shadow: 0px 0px 4px rgba(247, 63, 63, 0.9); */
 }
 .subcategory{
-  display: inline-block;
+
   /* position: relative; */
   left: 10px;
   bottom: 20px;
@@ -272,36 +306,56 @@ body{
 .subcategory-icon{
   width: 40px;
   padding-top: 5px;
-}
-.subcategory-details{
-  display: inline-block;
-  /* position: relative; */
-  /* border-radius: 10px;
-  box-shadow: 0px 0px 4px rgb(3, 165, 194);  */
+  opacity: 80%;
 }
 .subcategory-name{
-  padding: 8px;
-  font-weight: 400;
+  padding-left: 10px;
+  font-weight: 380;
 }
 .subcategory-percentage{
-  padding: 3px 8px 8px 8px;
+  padding: 5px 1px 8px 12px;
+  font-size: 12px;
   font-weight: 400;
   color: darkgrey;
 }
 .doughnut-balance-section{
   display: flex;
   flex-direction: column;
+  vertical-align: middle;
   position:absolute;
   bottom: 0;
   right: 15px;
   bottom: 15px;
   color: rgb(255, 100, 100);
-  /* border-radius: 10px;
-  box-shadow: 0px 0px 4px rgb(3, 165, 194);  */
 }
 .doughnut-amount{
   font-weight: bold;
+  border-radius: 10px;
+  /* box-shadow: 0px 0px 4px rgb(3, 165, 194);  */
 }
 .doughnut-transactions{
+  font-size: 12px;
   color: darkgrey;
+}
+.doughnut-amount-section{
+  display: flex;
+  justify-content: right;
+  vertical-align: middle;
+}
+.doughnut-dropdown-icon{
+  width: 10px;
+  height: 10px;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+.add-transactions-button{
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  border: none;
+  background-color:rgba(221, 242, 251, 0.958) ;
+}
+.add-transactions-img {
+  width: 45px;
+  height: 45px;
 }
