@@ -1,12 +1,12 @@
-body{
+body {
   font-family: poppins;
-  background-color:rgba(221, 242, 251, 0.958);
+  background-color: rgba(221, 242, 251, 0.958);
 }
 
 /* Side bar styling */
 
 
-.side-bar{
+.side-bar {
   position: fixed;
   left: 0;
   top: 0;
@@ -16,26 +16,31 @@ body{
   background-color: rgba(191, 235, 252, 0.964);
   z-index: 10;
 }
-.sidebar-header-container{
+
+.sidebar-header-container {
   display: flex;
   flex-direction: row;
   align-items: center;
   margin-bottom: 50px;
 }
-.sidebar-icon{
+
+.sidebar-icon {
   width: 40px;
   padding: 10px 15px 10px 15px;
 }
-.title{
+
+.title {
   flex: 1;
   align-items: center;
   font-size: 18px;
   font-weight: bolder;
 }
-.icons-container{
+
+.icons-container {
   display: flex;
   flex-direction: column;
 }
+
 .home-icon-container,
 .transactions-icon-container,
 .Account-icon-container,
@@ -45,7 +50,8 @@ body{
   display: flex;
   vertical-align: middle;
   height: 40px;
-  background-color: rgba(221, 242, 251, 0.958); /* rgb(201, 232, 242) */
+  background-color: rgba(221, 242, 251, 0.958);
+  /* rgb(201, 232, 242) */
   border-radius: 6px;
   box-shadow: 0px 0px 1px rgba(118, 140, 148, 0.4);
 }
@@ -53,13 +59,14 @@ body{
 .home-icon-container:hover,
 .transactions-icon-container:hover,
 .Account-icon-container:hover,
-.Categories-icon-container:hover{
+.Categories-icon-container:hover {
   margin: 4px 8px 10px 4px;
   padding: 4px 0px 0px 4px;
   display: flex;
   vertical-align: middle;
   height: 40px;
-  background-color: rgb(160, 218, 238);  /* rgb(160, 218, 238) */
+  background-color: rgb(160, 218, 238);
+  /* rgb(160, 218, 238) */
   border-radius: 6px;
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
 }
@@ -68,40 +75,46 @@ body{
   padding: 5px 0px 5px 8px;
   width: 30px;
 }
-.Categories-icon{
+
+.Categories-icon {
   padding: 5px 0px 5px 12px;
   width: 25px;
   height: 25px;
 }
-.transactions-icon{
+
+.transactions-icon {
   padding: 5px 0px 5px 9px;
   width: 30px;
 }
-.Account-icon{
+
+.Account-icon {
   padding: 5px 0px 7px 13px;
   width: 22px;
   height: 20px;
 }
+
 .home-title {
   padding: 8px 0px 5px 8px;
   font-family: Afacad+Flux;
   font-size: 16px;
   font-weight: 600;
 }
-.Categories-title{
+
+.Categories-title {
   padding: 5px 0px 0px 12px;
   font-family: Afacad+Flux;
   font-size: 16px;
   font-weight: 600;
 }
+
 .transactions-title {
   padding: 5px 0px 0px 8px;
   font-family: Afacad+Flux;
   font-size: 16px;
   font-weight: 600;
 }
-.Account-title
- {
+
+.Account-title {
   padding: 5px 0px 0px 12px;
   font-family: Afacad+Flux;
   font-size: 16px;
@@ -114,25 +127,28 @@ body{
 
 
 
-.top-bar{
+.top-bar {
   position: fixed;
   top: 0;
   left: 220px;
   right: 0;
   height: 55px;
-  background-color:rgba(191, 235, 252, 0.964) ;
+  background-color: rgba(191, 235, 252, 0.964);
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
-.user-details{
+
+.user-details {
   display: flex;
   justify-content: right;
   vertical-align: middle;
 }
-.user-dp{
+
+.user-dp {
   width: 30px;
   padding: 8px 4px 8px 8px;
 }
-.username{
+
+.username {
   font-family: Afacad+Flux;
   font-size: 16px;
   font-weight: 600;
@@ -144,32 +160,37 @@ body{
 /* DashBord styling */
 
 
-.upper-section{
+.upper-section {
   position: fixed;
   left: 220px;
   top: 55px;
 }
-.greetings-section{
+
+.greetings-section {
   display: flex;
   flex-direction: column;
   justify-content: left;
   padding: 5px 0px 0px 15px;
 }
-.welcome-note{
+
+.welcome-note {
   font-size: 13px;
-  font-weight:500;
+  font-weight: 500;
   color: rgb(103, 101, 101);
 }
-.username{
+
+.username {
   font-size: 15px;
-  font-weight:bold;
+  font-weight: bold;
 }
-.balances-container{
+
+.balances-container {
   display: flex;
   justify-content: space-between;
   margin: 15px 15px 15px 30px;
 }
-.acc-balance{
+
+.acc-balance {
   display: flex;
   flex-direction: column;
   padding: 8px 16px 8px 8px;
@@ -177,34 +198,40 @@ body{
   border-radius: 10px;
   box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
 }
-.acc-balance *{
+
+.acc-balance * {
   padding: 2px;
   color: rgb(43, 42, 42);
   font-size: 12px;
   font-weight: bold;
 }
-.acc-balance:hover{
+
+.acc-balance:hover {
   border-color: rgb(160, 218, 238);
   border-style: solid;
   transition: 0.15s;
 }
-.acc-name{
-  font-size:15px ;
+
+.acc-name {
+  font-size: 15px;
 }
-.transactions-count{
-  font-weight:400;
+
+.transactions-count {
+  font-weight: 400;
   color: rgb(43, 42, 42);
 }
-.add-account-icon{
+
+.add-account-icon {
   width: 30px;
   padding: 5px;
-  color:rgb(43, 42, 42) ;
+  color: rgb(43, 42, 42);
 }
-.graph-container{
+
+.graph-container {
   position: fixed;
   display: flex;
-  justify-content:space-between;
-  left:220px;
+  justify-content: space-between;
+  left: 220px;
   top: 250px;
   width: 1218px;
   height: 325px;
@@ -213,14 +240,43 @@ body{
   /* border-radius: 10px;
   box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.2); */
 }
-.linechart{
+
+@media screen and (max-width:1480px) {
+  .graph-container {
+    min-width: 800px;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    left: 220px;
+    top: 250px;
+    width: 900px;
+    height: 325px;
+    margin: 10px 10px 10px 30px;
+    padding: 15px 15px 15px 5px;
+    flex-direction: column;
+  }
+
+  .doughnut-container {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    left: 220px;
+    top: 800px;
+    width: 580px;
+    margin: 10px 10px 10px 30px;
+    padding: 15px 15px 15px 5px;
+  }
+}
+
+.linechart {
   top: 150px;
   width: 580px;
   padding: 15px 15px 15px 15px;
   border-radius: 10px;
   box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.2);
 }
-.doughnut-container{
+
+.doughnut-container {
   width: 580px;
   display: flex;
   position: relative;
@@ -228,7 +284,8 @@ body{
   border-radius: 10px;
   box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.2);
 }
-.doughnut{
+
+.doughnut {
   position: absolute;
   right: 0;
   top: 0;
@@ -238,10 +295,12 @@ body{
   /* border-radius: 10px;
   box-shadow: 0px 0px 40px rgb(221, 233, 153); */
 }
-.Doughnut{
+
+.Doughnut {
   width: 100px;
 }
-.legends-container{
+
+.legends-container {
   position: absolute;
   top: 40px;
   left: 40px;
@@ -250,14 +309,17 @@ body{
   /* border-radius: 10px;
   box-shadow: 0px 0px 4px rgba(247, 63, 63, 0.801); */
 }
-.legend-pair{
+
+.legend-pair {
   display: flex;
   vertical-align: middle;
 }
-.legend-name{
+
+.legend-name {
   font-size: 12px;
 }
-.legend-head{
+
+.legend-head {
   width: 12px;
   height: 12px;
   background-color: rgba(255, 99, 132, 0.6);
@@ -266,7 +328,8 @@ body{
   margin-top: 6px;
   margin-right: 8px;
 }
-.legend-head1{
+
+.legend-head1 {
   width: 12px;
   height: 12px;
   background-color: rgba(54, 162, 235, 0.6);
@@ -275,7 +338,8 @@ body{
   margin-top: 6px;
   margin-right: 8px;
 }
-.legend-head2{
+
+.legend-head2 {
   width: 12px;
   height: 12px;
   background-color: rgba(255, 206, 86, 0.6);
@@ -284,7 +348,8 @@ body{
   margin-top: 6px;
   margin-right: 8px;
 }
-.doughnut-category-details{
+
+.doughnut-category-details {
   display: flex;
   flex-direction: row;
   justify-content: left;
@@ -295,7 +360,8 @@ body{
   /* border-radius: 10px;
   box-shadow: 0px 0px 4px rgba(247, 63, 63, 0.9); */
 }
-.subcategory{
+
+.subcategory {
 
   /* position: relative; */
   left: 10px;
@@ -303,65 +369,76 @@ body{
   /* border-radius: 10px;
   box-shadow: 0px 0px 4px rgb(221, 233, 153); */
 }
-.subcategory-icon{
+
+.subcategory-icon {
   width: 40px;
   padding-top: 5px;
   opacity: 80%;
 }
-.subcategory-name{
+
+.subcategory-name {
   padding-left: 10px;
   font-weight: 380;
 }
-.subcategory-percentage{
+
+.subcategory-percentage {
   padding: 5px 1px 8px 12px;
   font-size: 12px;
   font-weight: 400;
   color: darkgrey;
 }
-.doughnut-balance-section{
+
+.doughnut-balance-section {
   display: flex;
   flex-direction: column;
   vertical-align: middle;
-  position:absolute;
+  position: absolute;
   bottom: 0;
   right: 15px;
   bottom: 15px;
   color: rgb(255, 100, 100);
 }
-.doughnut-amount{
+
+.doughnut-amount {
   font-weight: bold;
   border-radius: 10px;
   /* box-shadow: 0px 0px 4px rgb(3, 165, 194);  */
 }
-.doughnut-transactions{
+
+.doughnut-transactions {
   font-size: 12px;
   color: darkgrey;
 }
-.doughnut-amount-section{
+
+.doughnut-amount-section {
   display: flex;
   justify-content: right;
   vertical-align: middle;
 }
-.doughnut-dropdown-icon{
+
+.doughnut-dropdown-icon {
   width: 10px;
   height: 10px;
   margin-top: 5px;
   margin-right: 10px;
 }
-.add-transactions-button{
+
+.add-transactions-button {
   position: fixed;
   right: 40px;
   bottom: 40px;
   border: none;
-  background-color:rgba(221, 242, 251, 0.958) ;
+  background-color: rgba(221, 242, 251, 0.958);
   cursor: pointer;
 }
+
 .add-transactions-img {
   width: 45px;
   height: 45px;
 }
- /* The Modal (hidden by default) */
- .modal {
+
+/* The Modal (hidden by default) */
+.modal {
   display: none;
   position: fixed;
   z-index: 1;
