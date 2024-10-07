@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
 </head>
 <body>
   <div class="side-bar">
@@ -27,13 +28,13 @@
         <img class="home-icon" src="./assets/Icons/Home-Icon.webp" alt="">
         <span class="home-title">Home</span>
       </div>
-      <div class="Analytics-icon-container">
-        <img class="Analytics-icon" src="./assets/Icons/data-analytics.png" alt="">
-        <span class="Analytics-title">Analytics</span>
-      </div>
       <div class="transactions-icon-container">
         <img class="transactions-icon" src="./assets/Icons/transaction-icon.png" alt="">
         <span class="transactions-title">Transactions</span>
+      </div>
+      <div class="Categories-icon-container">
+        <img class="Categories-icon" src="./assets/Icons/categories.png" alt="">
+        <span class="Categories-title">Categories</span>
       </div>
       <div class="Account-icon-container">
         <img class="Account-icon" src="./assets/Icons/account-icon.png" alt="">
@@ -74,8 +75,31 @@
     </div>
   </div>
   <div class="graph-container">
-      <canvas id="myChart"></canvas>
+    <div class="linechart">
+      <canvas  id="LineChart"></canvas>
+    </div>
+    <div class="donught-container">
+      <div class="legends-container">
+        <span>Shopping</span>
+        <span>Bills & Fees</span>
+        <span>Groceires</span>
+      </div>
+      <div class="donught">
+        <canvas id="Donught"></canvas>
+      </div>
+      <div class="donught-category-details">
+        <div class="subcategory">
+          <img class="subcategory-icon" src="./assets/Icons/Shopping-icon.png">
+        </div>
+        <div class="subcategory-details">
+          <span class="subcategory-name">Shopping</span><br>
+          <span class="subcategory-percentage">49% of total</span>
+        </div>
+      </div>
+      <div>
+      </div>
+    </div>
   </div>
-  <script src="./Scripts/Home.js"></script>
+  <script src="./Scripts/Charts.js"></script>
 </body>
 </html>
