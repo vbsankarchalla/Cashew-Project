@@ -1,105 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Cashew - Home</title>
-  <link rel="icon" href="./assets/Cashew-icon-small.png">
-  <link rel="stylesheet" href="./styles/Home.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
-</head>
-<body>
-  <div class="side-bar">
-    <div class="sidebar-header-container">
-      <div class="image-container">
-        <img class="sidebar-icon" src="./assets/Cashew-icon-small.png" alt="">
-      </div>
-      <div class="title-container">
-        <span class="title">Cashew</span>
-      </div>
-    </div>
-    <div class="icons-container">
-      <div class="home-icon-container">
-        <img class="home-icon" src="./assets/Icons/Home-Icon.webp" alt="">
-        <span class="home-title">Home</span>
-      </div>
-      <div class="transactions-icon-container">
-        <img class="transactions-icon" src="./assets/Icons/transaction-icon.png" alt="">
-        <span class="transactions-title">Transactions</span>
-      </div>
-      <div class="Categories-icon-container">
-        <img class="Categories-icon" src="./assets/Icons/categories.png" alt="">
-        <span class="Categories-title">Categories</span>
-      </div>
-      <div class="Account-icon-container">
-        <img class="Account-icon" src="./assets/Icons/account-icon.png" alt="">
-        <span class="Account-title">Account</span>
-      </div>
-    </div>
-  </div>
-  <div class="top-bar">
-    <div class="right-section">
-      <div class="user-details">
-        <div>
-          <img class="user-dp" src="./assets/Cashew-icon-small.png" alt="">
+  <head>
+    <title>Cashew - Home</title>
+    <link rel="icon" href="./assets/Cashew-icon-small.png" />
+    <link rel="stylesheet" href="./styles/Home.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+  </head>
+  <body>
+    <div class="side-bar">
+      <div class="sidebar-header-container">
+        <div class="image-container">
+          <img
+            class="sidebar-icon"
+            src="./assets/Cashew-icon-small.png"
+            alt=""
+          />
         </div>
+        <div class="title-container">
+          <span class="title">Cashew</span>
+        </div>
+      </div>
+      <div class="icons-container">
+        <div class="home-icon-container">
+          <img class="home-icon" src="./assets/Icons/Home-Icon.webp" alt="" />
+          <span class="home-title">Home</span>
+        </div>
+        <div class="transactions-icon-container">
+          <img
+            class="transactions-icon"
+            src="./assets/Icons/transaction-icon.png"
+            alt=""
+          />
+          <span class="transactions-title">Transactions</span>
+        </div>
+        <div class="Categories-icon-container">
+          <img
+            class="Categories-icon"
+            src="./assets/Icons/categories.png"
+            alt=""
+          />
+          <span class="Categories-title">Categories</span>
+        </div>
+        <div class="Account-icon-container">
+          <img
+            class="Account-icon"
+            src="./assets/Icons/account-icon.png"
+            alt=""
+          />
+          <span class="Account-title">Account</span>
+        </div>
+      </div>
+    </div>
+    <div class="top-bar">
+      <div class="right-section">
+        <div class="user-details">
+          <div>
+            <img class="user-dp" src="./assets/Cashew-icon-small.png" alt="" />
+          </div>
+          <span class="username">Challa Venkata Bhavani Sankar</span>
+        </div>
+      </div>
+    </div>
+    <div class="upper-section">
+      <div class="greetings-section">
+        <span class="welcome-note">Welcome,</span>
         <span class="username">Challa Venkata Bhavani Sankar</span>
       </div>
-    </div>
-  </div>
-  <div class="upper-section">
-    <div class="greetings-section">
-      <span class="welcome-note">Welcome,</span>
-      <span class="username">Challa Venkata Bhavani Sankar</span>
-    </div>
-    <div class="balances-container">
-      <div class="acc-balance">
-        <span class="acc-name">HDFC</span>
-        <span>₹2,004 INR</span>
-        <span class="transactions-count">34 transactions</span>
-      </div>
-      <div class="acc-balance">
-        <span class="acc-name">SBI</span>
-        <span>₹32,004 INR</span>
-        <span class="transactions-count">23 transactions</span>
-      </div>
-      <div class="acc-balance">
-        <img class="add-account-icon" src="./assets/Icons/add-account-icon.png" alt="">
-        <span class="transactions-count">Account</span>
-      </div>
-    </div>
-  </div>
-  <div class="graph-container">
-    <div class="linechart">
-      <canvas  id="LineChart"></canvas>
-    </div>
-    <div class="donught-container">
-      <div class="legends-container">
-        <span>Shopping</span>
-        <span>Bills & Fees</span>
-        <span>Groceires</span>
-      </div>
-      <div class="donught">
-        <canvas id="Donught"></canvas>
-      </div>
-      <div class="donught-category-details">
-        <div class="subcategory">
-          <img class="subcategory-icon" src="./assets/Icons/Shopping-icon.png">
+      <div class="balances-container">
+        <div class="acc-balance">
+          <span class="acc-name">HDFC</span>
+          <span>₹2,004 INR</span>
+          <span class="transactions-count">34 transactions</span>
         </div>
-        <div class="subcategory-details">
-          <span class="subcategory-name">Shopping</span><br>
-          <span class="subcategory-percentage">49% of total</span>
+        <div class="acc-balance">
+          <span class="acc-name">SBI</span>
+          <span>₹32,004 INR</span>
+          <span class="transactions-count">23 transactions</span>
+        </div>
+        <div class="acc-balance">
+          <img
+            class="add-account-icon"
+            src="./assets/Icons/add-account-icon.png"
+            alt=""
+          />
+          <span class="transactions-count">Account</span>
         </div>
       </div>
-      <div>
+    </div>
+    <div class="graph-container">
+      <div class="linechart">
+        <canvas id="LineChart"></canvas>
+      </div>
+      <div class="doughnut-container">
+        <div class="legends-container">
+          <span>Shopping</span>
+          <span>Bills & Fees</span>
+          <span>Groceires</span>
+        </div>
+        <div class="doughnut">
+          <canvas id="Doughnut"></canvas>
+        </div>
+        <div class="doughnut-category-details">
+          <div class="subcategory">
+            <img
+              class="subcategory-icon"
+              src="./assets/Icons/Shopping-icon.png"
+            />
+          </div>
+          <div class="subcategory-details">
+            <span class="subcategory-name">Shopping</span><br />
+            <span class="subcategory-percentage">49% of total</span>
+          </div>
+        </div>
+        <div class="doughnut-balance-section">
+          <span>🔽</span>
+          <span class="doughnut-amount">₹82,472</span>
+          <span class="doughnut-transactions"> 22 transactions</span>
+        </div>
       </div>
     </div>
-  </div>
-  <script src="./Scripts/Charts.js"></script>
-</body>
+    <script src="./Scripts/Charts.js"></script>
+  </body>
 </html>

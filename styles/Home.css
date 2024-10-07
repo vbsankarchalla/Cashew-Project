@@ -220,26 +220,25 @@ body{
   border-radius: 10px;
   /* box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1); */
 }
-.donught-container{
+.doughnut-container{
   width: 600px;
   display: flex;
   position: relative;
   justify-content: space-between;
-  flex: 1fr 250px;  
-  /* border-radius: 10px;
-  box-shadow: 0px 0px 40px rgba(247, 63, 63, 0.801); */
+  border-radius: 10px;
+  /* box-shadow: 0px 0px 40px rgba(247, 63, 63, 0.801); */
 }
-.donught{
+.doughnut{
   position: absolute;
   right: 0;
   top: 0;
-  padding: 15px 35px 0px 0px;
+  padding: 10px 35px 0px 0px;
   width: 225px;
   height: 225px;
   /* border-radius: 10px;
   box-shadow: 0px 0px 40px rgb(221, 233, 153); */
 }
-.Donught{
+.Doughnut{
   width: 100px;
 }
 .legends-container{
@@ -248,34 +247,37 @@ body{
   left: 40px;
   display: flex;
   flex-direction: column;
+  /* border-radius: 10px;
+  box-shadow: 0px 0px 4px rgba(247, 63, 63, 0.801); */
 }
-.donught-category-details{
+.doughnut-category-details{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 280px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 4px rgba(247, 63, 63, 0.9);
+  bottom: 15px;
+  left: 40px;
+  width: 160px;
+  /* border-radius: 10px;
+  box-shadow: 0px 0px 4px rgba(247, 63, 63, 0.9); */
 }
 .subcategory{
   display: inline-block;
   /* position: relative; */
   left: 10px;
   bottom: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 4px rgb(221, 233, 153);
+  /* border-radius: 10px;
+  box-shadow: 0px 0px 4px rgb(221, 233, 153); */
 }
 .subcategory-icon{
   width: 40px;
+  padding-top: 5px;
 }
 .subcategory-details{
   display: inline-block;
   /* position: relative; */
-  border-radius: 10px;
-  box-shadow: 0px 0px 4px rgb(3, 165, 194); 
+  /* border-radius: 10px;
+  box-shadow: 0px 0px 4px rgb(3, 165, 194);  */
 }
 .subcategory-name{
   padding: 8px;
@@ -284,5 +286,22 @@ body{
 .subcategory-percentage{
   padding: 3px 8px 8px 8px;
   font-weight: 400;
+  color: darkgrey;
+}
+.doughnut-balance-section{
+  display: flex;
+  flex-direction: column;
+  position:absolute;
+  bottom: 0;
+  right: 15px;
+  bottom: 15px;
+  color: rgb(255, 100, 100);
+  /* border-radius: 10px;
+  box-shadow: 0px 0px 4px rgb(3, 165, 194);  */
+}
+.doughnut-amount{
+  font-weight: bold;
+}
+.doughnut-transactions{
   color: darkgrey;
 }

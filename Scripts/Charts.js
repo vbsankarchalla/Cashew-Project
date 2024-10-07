@@ -1,7 +1,7 @@
 
         // Get the canvas element
         const ctx_LineChart = document.getElementById('LineChart').getContext('2d');
-        const ctx_donught = document.getElementById('Donught').getContext('2d');
+        const ctx_donut = document.getElementById('Doughnut').getContext('2d');
          
         // Create a gradient background for the line chart
         const gradient = ctx_LineChart.createLinearGradient(0, 0, 0, 270);
@@ -54,7 +54,7 @@
 
 
          // Define the chart with data and configurations
-        const donught = new Chart(ctx_donught, {
+        const donut = new Chart(ctx_donut, {
             type: 'doughnut', // Chart type
             data: {
             // labels: ['Red', 'Blue', 'Yellow'], // Labels for the pie slices
