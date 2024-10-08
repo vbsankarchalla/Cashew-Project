@@ -241,30 +241,28 @@ body {
   box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.2); */
 }
 
-@media screen and (max-width:1480px) {
+@media screen and (max-width: 1480px) {
   .graph-container {
-    min-width: 800px;
-    position: fixed;
+    min-width: 100%; /* Allow flexibility for smaller screens */
+    position: relative; /* Relative positioning is less intrusive */
     display: flex;
-    justify-content: space-between;
-    left: 220px;
+    justify-content: center; /* Center the content */
     top: 250px;
-    width: 900px;
+    width: auto; /* Allow width to adjust dynamically */
     height: 325px;
-    margin: 10px 10px 10px 30px;
-    padding: 15px 15px 15px 5px;
-    flex-direction: column;
+    margin: 10px;
+    padding: 15px;
+    flex-direction: column; /* Stacks elements vertically */
   }
 
   .doughnut-container {
-    position: fixed;
+    position: relative;
     display: flex;
-    justify-content: space-between;
-    left: 220px;
+    justify-content: center;
     top: 800px;
-    width: 580px;
-    margin: 10px 10px 10px 30px;
-    padding: 15px 15px 15px 5px;
+    width: auto;
+    margin: 10px;
+    padding: 15px;
   }
 }
 
@@ -416,7 +414,8 @@ body {
   vertical-align: middle;
 }
 
-.doughnut-dropdown-icon {
+.doughnut-dropdown-icon,
+.transaction-indicator {
   width: 10px;
   height: 10px;
   margin-top: 5px;
@@ -438,7 +437,7 @@ body {
 }
 
 /* The Modal (hidden by default) */
-.modal {
+.add-transactions-modal {
   display: none;
   position: fixed;
   z-index: 1;
@@ -456,9 +455,98 @@ body {
   background-color: white;
   padding: 20px;
   border-radius: 5px;
-  width: 300px;
+  width: 700px;
+  height: 500px;
+  background-color: rgba(221, 242, 251, 0.958);
 }
 
+.add-transaction-header{
+  font-size: 25px;
+  font-weight: bold;
+  margin: 15px;
+}
+
+.tran-top-section{
+  /* box-shadow: 0px 0px 8px rgb(0, 0, 0); */
+  margin: 0px 0px 30px 0px;
+}
+
+.tran-type{
+  display: flex;
+  justify-content:center;
+  /* width: 780px; */
+  margin: 5px 0px 0px 0px;
+  padding: 0px 8px 0px 8px;
+  background-color: rgb(194, 232, 245) ;
+}
+
+.transaction-Expense,
+.transaction-Income,
+.transaction-Transfer{
+  padding: 5px;
+  width: 300px;
+  display: flex;
+  justify-content:center;
+}
+
+.transaction-Expense:hover,
+.transaction-Income:hover,
+.transaction-Transfer:hover {
+  background-color: rgb(160, 218, 238) ;
+}
+
+.transaction-category{
+  font-weight:410;
+}
+
+.tran-amount-section{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  /* width: 794px; */
+  height: 100px;
+  margin: 0px 0px 0px 0px;
+  padding: -2px 5px 5px 5px;
+  box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.2);
+}
+
+.tran-category-icon{
+  width: 60px;
+  height: 60px;
+  padding: 20px 60px 20px 60px;
+}
+
+.tran-category-amount{
+  font-family:arial ;
+  font-size: 30px;
+  font-weight:bolder;
+  padding: 20px 30px 20px 60px;
+}
+
+.tran-bottom-section{
+  height: 200px;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+}
+
+.time-stamp-section{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 0px 3px rgba(255, 9, 9, 0.856);
+}
+
+.calender-icon{
+  width: 25px; 
+  margin: 4px;
+  padding: 4px;
+  border-radius: 15px;
+  background-color: rgb(160, 218, 238);
+}
+
+.time-stamp-today{
+  font-size: 23px;
+  font-weight: bold;
+}
 /* Close Button */
 .close {
   color: #aaa;

@@ -150,13 +150,45 @@
     </button>
 
     <!-- The Modal -->
-    <div class="modal" id="myModal">
+    <div class="add-transactions-modal" id="new-transactions-Modal">
       <div class="modal-content">
         <span class="close">&times;</span>
-        <h2>Enter Your Details</h2>
-        <form id="userForm">
-          <label for="name">Name:</label><br>
-          <input type="text" id="name" name="name" required><br><br>
+        <span class="add-transaction-header">Add Transaction</span>
+        <form id="add-transaction-form">
+          <div class="tran-top-section">
+            <div class="tran-type">
+              <div class="transaction-Expense">
+                <img class="transaction-indicator" src="./assets/Icons/dropdown-icon.png" alt="">
+                <span >Expense</span>
+              </div>
+              <div class="transaction-Income">
+                <img class="transaction-indicator" src="./assets/Icons/up-arrow-icon.webp" alt="">
+                <span >Income</span>
+              </div>
+              <div class="transaction-Transfer">
+                <img class="transaction-indicator" src="./assets/Icons/facing arrows-icon.webp" alt="">
+                <span >Transfer</span>
+              </div>
+            </div>
+            <div class="tran-amount-section">
+              <img class="tran-category-icon" src="./assets/Icons/Bills & Fees-icon.png" alt="">
+              <span class="tran-category-amount">₹294862</span>
+            </div>
+          </div>
+          <div class="tran-bottom-section">
+            <div class="time-stamp-section">
+              <div>
+                <img class="calender-icon" src="./assets/Icons/calender-icon.webp" alt="">
+                <span class="time-stamp-today">Today</span>
+              </div>
+              <div>
+                <span>Time</span>
+              </div>
+            </div>
+
+          </div>
+          <!-- <label for="name">Name:</label><br> -->
+          <input type="text" id="tran-title" name="tran-title" placeholder="Title" required><br><br>
           <label for="email">Email:</label><br>
           <input type="email" id="email" name="email" required><br><br>
           <button type="submit">Submit</button>

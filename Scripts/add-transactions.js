@@ -1,10 +1,10 @@
  // Get the modal, button, and close elements
- const modal = document.getElementById("myModal");
+ const modal = document.getElementById("new-transactions-Modal");
  const openButton = document.querySelector(".add-transactions-button");
  const closeButton = document.querySelector(".close");
 
  // When the user clicks the button, open the modal
- openButton.onclick = function() {
+   openButton.onclick = function() {
    modal.style.display = "flex";
  }
 
@@ -21,16 +21,16 @@
  }
 
  // Handle form submission
- const form = document.getElementById("userForm");
+ const form = document.getElementById("add-transaction-form");
  form.onsubmit = function(event) {
    event.preventDefault(); // Prevent form from submitting traditionally
 
    // Get form data
-   const name = document.getElementById("name").value;
-   const email = document.getElementById("email").value;
+   const name = document.getElementById("tran-title").value;
+
 
    // Display data or perform further actions
-   alert(`Name: ${name}\nEmail: ${email}`);
+   alert(`Name: ${name}`);
 
    // Close the modal after submission
    modal.style.display = "none";
