@@ -14,7 +14,7 @@ body {
   width: 220px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
   background-color: rgba(191, 235, 252, 0.964);
-  z-index: 0;
+  z-index: 2;
 }
 
 .sidebar-header-container {
@@ -134,7 +134,8 @@ body {
   right: 0;
   height: 55px;
   background-color: rgba(191, 235, 252, 0.964);
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 .user-details {
@@ -239,7 +240,6 @@ body {
   margin: 10px 10px 10px 30px;
   padding: 15px 15px 15px 5px;
   border-radius: 10px;
-  z-index: 20;
   /* box-shadow: 0px 0px 40px rgb(255, 74, 74); */
 }
 
@@ -476,6 +476,7 @@ body {
   width: 700px;
   height: 620px;
   background-color: rgba(221, 242, 251, 0.958);
+  z-index: 23;
 }
 
 .add-transaction-header{
