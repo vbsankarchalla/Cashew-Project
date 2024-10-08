@@ -177,21 +177,30 @@
           </div>
           <div class="tran-bottom-section">
             <div class="time-stamp-section">
-              <div>
+              <div class="time-stamp-leftsection">
                 <img class="calender-icon" src="./assets/Icons/calender-icon.webp" alt="">
                 <span class="time-stamp-today">Today</span>
               </div>
               <div>
-                <span>Time</span>
+                <span class="time-stamp-rightsection">Time</span>
               </div>
             </div>
-
+            <div class="tran-banks-section">
+              <div>
+                <button class="down-option">▾</button>
+                <button class="option1">HDFC</button>
+                <button class="option2">SBI</button>
+                <button class="option3">UCO</button>
+                <button class="option4">Wallet</button>
+                <button class="add-option">+</button>
+              </div>
+            </div>
+            <div class="tran-description">
+              <input type="text" id="tran-title" name="tran-title" placeholder="Title" required>
+              <input type="text" id="tran-notes" name="tran-notes" placeholder="Notes" required>
+              <button class="tran-addtransaction" type="submit">Add Transaction</button>
+            </div>
           </div>
-          <!-- <label for="name">Name:</label><br> -->
-          <input type="text" id="tran-title" name="tran-title" placeholder="Title" required><br><br>
-          <label for="email">Email:</label><br>
-          <input type="email" id="email" name="email" required><br><br>
-          <button type="submit">Submit</button>
         </form>
       </div>
     </div>
