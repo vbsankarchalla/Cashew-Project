@@ -162,10 +162,10 @@ body {
 
 
 .upper-section {
-  position: fixed;
+  position: absolute;
   left: 220px;
   top: 55px;
-  /* box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2); */
+  /* box-shadow: 0px 0px 2px rgba(255, 0, 0, 0.916); */
 }
 
 .greetings-section {
@@ -274,13 +274,13 @@ body {
   }
 }
 
-@media screen and (max-width: 1000px) {
+/* @media screen and (max-width: 1000px) {
   .side-bar {
     min-width: 75px;
     width: auto;
 
   }  
-}
+} */
 
 .linechart {
   width: 580px;
@@ -444,14 +444,14 @@ body {
   right: 40px;
   bottom: 40px;
   border: none;
-  background-color: rgba(221, 242, 251, 0.958);
+  background-color:transparent;
   cursor: pointer;
   z-index: 22;
 }
 
 .add-transactions-img {
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
 }
 
 /* The Modal (hidden by default) */
@@ -486,8 +486,9 @@ body {
 }
 
 .tran-top-section{
+  width: 600px;
   /* box-shadow: 0px 0px 8px rgb(0, 0, 0); */
-  margin: 0px 0px 30px 0px;
+  margin: 30px 0px 30px 50px;
 }
 
 .tran-type{
@@ -543,8 +544,8 @@ body {
 }
 
 .tran-bottom-section{
-  height: 320px;
-  /* box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2); */
+  height: 400px;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
 }
 
 .time-stamp-section{

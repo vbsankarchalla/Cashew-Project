@@ -10,8 +10,6 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap"
       rel="stylesheet"
@@ -21,6 +19,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   </head>
   <body>
+    <!--    Side Bar    -->
     <div class="side-bar">
       <div class="sidebar-header-container">
         <div class="image-container">
@@ -65,6 +64,8 @@
         </div>
       </div>
     </div>
+
+    <!--    Top Bar   -->
     <div class="top-bar">
       <div class="right-section">
         <div class="user-details">
@@ -127,7 +128,7 @@
           <div class="subcategory">
             <img
               class="subcategory-icon"
-              src="./assets/Icons/Shopping-icon.png"
+              src="./assets/Icons/category_icons/Shopping-icon.png"
             />
           </div>
           <div class="subcategory-details">
@@ -146,7 +147,7 @@
     </div>
 
     <button class="add-transactions-button">
-      <img class="add-transactions-img" src="./assets/Icons/plus-icon.png">
+      <img class="add-transactions-img" alt="Button Image" src="./assets/Icons/plus-icon.png">
     </button>
 
     <!--------------- The Modal -------------------->
@@ -172,7 +173,7 @@
               </div>
             </div>
             <div class="tran-amount-section">
-              <img class="tran-category-icon" src="./assets/Icons/Bills & Fees-icon.png" alt="">
+              <img class="tran-category-icon" src="./assets/Icons/category_icons/Bills & Fees-icon.png" alt="">
               <span class="tran-category-amount">₹294862</span>
             </div>
           </div>
@@ -198,8 +199,10 @@
             </div>
             <div class="tran-description">
               <input type="text" id="tran-title" name="tran-title" placeholder="Title" required>
-              <input type="text" id="tran-notes" name="tran-notes" placeholder="Notes" required>
-              <button class="tran-addtransaction" type="submit">Add Transaction</button>
+              <input type="text" id="tran-notes" name="tran-notes" placeholder="Notes" >
+              <a href="http://127.0.0.1:5500/Transactions.html">
+                <button class="tran-addtransaction">Add Transaction</button>
+              </a>
             </div>
           </div>
         </form>
