@@ -161,6 +161,7 @@ body {
   top: 120px;
   left: 280px;
   padding: 20px;
+  width: 1150px;
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
 }
 
@@ -170,20 +171,33 @@ body {
 }
 
 .categories-section{
-  margin: 15px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 2px rgba(255, 33, 33, 0.86);
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap to the next line */
+  gap: 2px; /* Space between items */
+  /* border-radius: 10px;
+  box-shadow: 0px 0px 2px rgba(255, 33, 33, 0.86); */
 }
+
+.category{
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.86);
+  }
+
+  .cat-leftsection{
+    display: flex;
+    justify-content: left;
+  }
 
 .beauty-icon{
   width: 45px;
   padding: 10px;
-  
 }
-.category-image{
-display: flex;
 
-}
 .category-details{
   display: flex;
   flex-direction: column;
@@ -197,4 +211,31 @@ display: flex;
 .more-details{
   font-size: 10px;
   color: grey;
+}
+
+.cat-rightsection{
+  margin: 12px 15px 0px 0px;
+}
+
+@media (max-width:1420px) {
+  .categoriesPage-div{
+    width: auto;
+    min-width: 700px;
+  }
+}
+
+
+.add-categories-button {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  border: none;
+  background-color:transparent;
+  cursor: pointer;
+  z-index: 22;
+}
+
+.add-categories-img {
+  width: 40px;
+  height: 40px;
 }
