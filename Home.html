@@ -16,7 +16,10 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
   </head>
   <body>
     <!--    Side Bar    -->
@@ -77,14 +80,13 @@
       </div>
     </div>
 
-    
     <div class="upper-section">
       <div class="greetings-section">
         <span class="welcome-note">Welcome,</span>
         <span class="username">Challa Venkata Bhavani Sankar</span>
       </div>
       <div class="balances-container">
-        <div class="acc-balance">
+        <div id="AccountDialogoption1" class="acc-balance">
           <span class="acc-name">HDFC</span>
           <span>₹2,004 INR</span>
           <span class="transactions-count">34 transactions</span>
@@ -104,7 +106,7 @@
         </div>
       </div>
     </div>
-    <div class="graph-container"> 
+    <div class="graph-container">
       <div class="linechart">
         <canvas id="LineChart"></canvas>
       </div>
@@ -140,7 +142,11 @@
         </div>
         <div class="doughnut-balance-section">
           <div class="doughnut-amount-section">
-            <img  class="doughnut-dropdown-icon" src="./assets/Icons/dropdown-icon.png" alt="">
+            <img
+              class="doughnut-dropdown-icon"
+              src="./assets/Icons/dropdown-icon.png"
+              alt=""
+            />
             <span class="doughnut-amount">₹82,472</span>
           </div>
           <span class="doughnut-transactions"> 22 transactions</span>
@@ -149,12 +155,17 @@
     </div>
 
     <button class="add-transactions-button">
-      <img class="add-transactions-img" alt="Button Image" src="./assets/Icons/plus-icon.png">
+      <img
+        class="add-transactions-img"
+        alt="Button Image"
+        src="./assets/Icons/plus-icon.png"
+      />
     </button>
 
-    <!--------------- The Modal -------------------->
+    <!---------------    Modales    -------------------->
 
     <div class="add-transactions-modal" id="new-transactions-Modal">
+      <!--  Transactions Model  -->
       <div class="modal-content">
         <span class="close">&times;</span>
         <span class="add-transaction-header">Add Transaction</span>
@@ -162,27 +173,47 @@
           <div class="tran-top-section">
             <div class="tran-type">
               <div class="transaction-Expense">
-                <img class="transaction-indicator" src="./assets/Icons/dropdown-icon.png" alt="">
-                <span >Expense</span>
+                <img
+                  class="transaction-indicator"
+                  src="./assets/Icons/dropdown-icon.png"
+                  alt=""
+                />
+                <span>Expense</span>
               </div>
               <div class="transaction-Income">
-                <img class="transaction-indicator" src="./assets/Icons/up-arrow-icon.webp" alt="">
-                <span >Income</span>
+                <img
+                  class="transaction-indicator"
+                  src="./assets/Icons/up-arrow-icon.webp"
+                  alt=""
+                />
+                <span>Income</span>
               </div>
               <div class="transaction-Transfer">
-                <img class="transaction-indicator" src="./assets/Icons/facing arrows-icon.webp" alt="">
-                <span >Transfer</span>
+                <img
+                  class="transaction-indicator"
+                  src="./assets/Icons/facing arrows-icon.webp"
+                  alt=""
+                />
+                <span>Transfer</span>
               </div>
             </div>
             <div class="tran-amount-section">
-              <img class="tran-category-icon" src="./assets/Icons/category_icons/Bills & Fees-icon.png" alt="">
+              <img
+                class="tran-category-icon"
+                src="./assets/Icons/category_icons/Bills & Fees-icon.png"
+                alt=""
+              />
               <span class="tran-category-amount">₹294862</span>
             </div>
           </div>
           <div class="tran-bottom-section">
             <div class="time-stamp-section">
               <div class="time-stamp-leftsection">
-                <img class="calender-icon" src="./assets/Icons/calender-icon.webp" alt="">
+                <img
+                  class="calender-icon"
+                  src="./assets/Icons/calender-icon.webp"
+                  alt=""
+                />
                 <span class="time-stamp-today">Today</span>
               </div>
               <div>
@@ -200,8 +231,19 @@
               </div>
             </div>
             <div class="tran-description">
-              <input type="text" id="tran-title" name="tran-title" placeholder="Title" required>
-              <input type="text" id="tran-notes" name="tran-notes" placeholder="Notes" >
+              <input
+                type="text"
+                id="tran-title"
+                name="tran-title"
+                placeholder="Title"
+                required
+              />
+              <input
+                type="text"
+                id="tran-notes"
+                name="tran-notes"
+                placeholder="Notes"
+              />
               <a href="http://127.0.0.1:5500/Transactions.html">
                 <button class="tran-addtransaction">Add Transaction</button>
               </a>
@@ -210,6 +252,71 @@
         </form>
       </div>
     </div>
+
+    <!-- Dialog element to add accounts -->
+    <dialog id="AccouontDialog">
+      <div class="bank-overview-dailog">
+        <div class="bank-overview-top-section">
+          <img
+            class="AccouontDialog-back-icon"
+            id="closeDialogBtn"
+            src="./assets/Icons/gray-back-arrow-icon.png"
+            alt=""
+          />
+          <img
+            class="AccouontDialog-editIcon"
+            id="editAccountBtn"
+            src="./assets/Icons/editpencil-icon.png"
+            alt=""
+          />
+        </div>
+        <div class="account-Header-Name">HDFC</div>
+        <div class="account-details-seciton">
+          <span class="acctotal-tag">Account Total</span>
+          <span class="acc-amount">₹30,563 INR</span>
+          <span class="nooftrans">43 transactions</span>
+        </div>
+        <div class="time-period-section">
+          <img class="timer-icon" src="./assets/Icons/timer-icon.png" alt="" />
+          <span class="time-period-tag">All Time</span>
+        </div>
+        <div class="exp-in-corr-section">
+          <div class="exp-div">
+            <div class="exp-div-left">
+              <span class="exp-tag">Expense</span>
+              <span class="exp-count">(x30)</span>
+            </div>
+            <div class="exp-div-right">
+              <hr class="custom-horizontal-line">
+              <span class="exp-amount">₹1,30,563</span>
+            </div>            
+          </div>
+
+          <div class="inc-div">
+            <div class="inc-div-left">
+              <span class="inc-tag">Income</span>
+              <span class="inc-count">(x20)</span>
+            </div>
+            <div class="inc-div-right">
+              <hr class="custom-horizontal-line">
+              <span class="inc-amount">₹1,50,063</span>
+            </div>            
+          </div>
+
+          <div class="corr-div">
+            <div class="corr-div-left">
+              <span class="corr-tag">Balance Correction</span>
+              <span class="corr-count">(x30)</span>
+            </div>
+            <div class="corr-div-right">
+              <hr class="custom-horizontal-line">
+              <span class="corr-amount">₹1,30,563</span>
+            </div>            
+          </div>
+        </div>
+      </div>
+    </dialog>
+
     <script src="./Scripts/Charts.js"></script>
     <script src="./Scripts/add-transactions.js"></script>
   </body>
