@@ -23,15 +23,45 @@
 
   // Get references to the dialog and buttons
   const dialog = document.getElementById('AccouontDialog');
-  const openDialogBtn = document.getElementById('AccountDialogoption1');
+  const openDialogBtn1 = document.getElementById('AccountDialogoption1');
   const closeDialogBtn = document.getElementById('closeDialogBtn');
 
     // Open the dialog when the "Open Dialog" button is clicked
-    openDialogBtn.addEventListener('click', () => {
+    openDialogBtn1.addEventListener('click', () => {
       dialog.showModal(); // Opens the dialog as a modal
     });
 
     // Close the dialog when the "Close" button is clicked
     closeDialogBtn.addEventListener('click', () => {
       dialog.close(); // Closes the dialog
+    });
+    // When the user clicks anywhere outside of the modal, close it
+    // window.onclick = function(event) {
+    //   if (event.target == dialog) {
+    //     dialog.style.display = "none";
+    //   }
+    // }
+
+      // Get references to the dialog and buttons
+  const openDialogBtn2 = document.getElementById('AccountDialogoption2');
+
+    // Open the dialog when the "Open Dialog" button is clicked
+    openDialogBtn2.addEventListener('click', () => {
+      dialog.showModal(); // Opens the dialog as a modal
+    });
+
+    // Close the dialog when the "Close" button is clicked
+    closeDialogBtn.addEventListener('click', () => {
+      dialog.close(); // Closes the dialog
+    });
+
+    const Add_Account_Dialog = document.getElementById('Add_Account_Dialog');
+    const openAddAccDailog = document.getElementById('Add_Account_Dialog');
+    const closeAddAccDialogBtn = document.getElementById('closeDialogBtn');
+
+    openAddAccDailog.addEventListener('click',() => {
+      Add_Account_Dialog.showModal();
+    });
+    closeAddAccDialogBtn.addEventListener('click',() =>{
+      Add_Account_Dialog.close();
     });

@@ -674,13 +674,14 @@ dialog {
   border: none;
   border-radius: 8px;
   padding: 20px;
+  height: 500px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   background-color: rgba(255, 243, 239, 0.958);
 }
 
 /* Fullscreen background to make the dialog modal */
 dialog::backdrop {
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .bank-overview-dailog{
@@ -691,14 +692,23 @@ dialog::backdrop {
 .bank-overview-top-section{
   display: flex;
   justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: auto;
+  padding: 10px;
+  /* box-shadow: 0px 0px 5px rgba(10, 108, 255, 0.9); */
 }
 
 .AccouontDialog-back-icon{
-  width: 21px;
+  width: 22px;
+  padding: 10px;
 }
 .AccouontDialog-editIcon {
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
+  padding: 10px;
 }
 
 .account-Header-Name{
@@ -839,8 +849,8 @@ hr.custom-horizontal-line {
   top: 360px;
   width: 720px;
   height: 325px;
-  margin: 10px 10px 10px 30px;
-  padding: 15px 15px 15px 5px;
+  margin: -3px 10px 10px 30px;
+  padding: 10px 15px 15px 5px;
   border-radius: 8px;
   /* box-shadow: 0px 0px 2px rgb(255, 74, 74); */
 }
@@ -855,7 +865,8 @@ hr.custom-horizontal-line {
 } */
 
 .Acc-doughnut-container {
-  width: 720px;
+  width: 700px;
+  padding: 20px;
   display: flex;
   position: relative;
   justify-content: space-between;
