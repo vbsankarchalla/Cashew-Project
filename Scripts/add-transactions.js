@@ -55,13 +55,13 @@
       dialog.close(); // Closes the dialog
     });
 
-    const Add_Account_Dialog = document.getElementById('Add_Account_Dialog');
-    const openAddAccDailog = document.getElementById('Add_Account_Dialog');
-    const closeAddAccDialogBtn = document.getElementById('closeDialogBtn');
+    const AddAccountDialog = document.getElementById('AddAccountDialog');
+    const openAddAccDailog = document.getElementById('AddAccountDialogid');
+    const closeAddAccDialogBtn = document.getElementById('close');
 
     openAddAccDailog.addEventListener('click',() => {
-      Add_Account_Dialog.showModal();
+      AddAccountDialog.showModal();
     });
     closeAddAccDialogBtn.addEventListener('click',() =>{
-      Add_Account_Dialog.close();
+      AddAccountDialog.close();
     });
