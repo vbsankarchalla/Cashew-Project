@@ -65,3 +65,16 @@
     closeAddAccDialogBtn.addEventListener('click',() =>{
       AddAccountDialog.close();
     });
+
+    
+
+    const editAccountDialog = document.getElementById("EditAccountDialog");
+    const openEditAccDialogBtn = document.getElementById("editAccountBtn");
+    const closeEditAccDialogBtn = document.getElementById('closeDialogBtn');
+
+    openEditAccDialogBtn.addEventListener('click',()=>{
+      editAccountDialog.showModal();
+    });
+    closeEditAccDialogBtn.addEventListener('click',()=>{
+      editAccountDialog.close();
+    })
