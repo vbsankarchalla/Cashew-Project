@@ -4,8 +4,6 @@ body {
 }
 
 /* Side bar styling */
-
-
 .side-bar {
   position: fixed;
   left: 0;
@@ -95,38 +93,33 @@ body {
 
 .home-title {
   padding: 8px 0px 5px 8px;
-  font-family: Afacad+Flux;
+  font-family: AfacadFlux;
   font-size: 16px;
   font-weight: 600;
 }
 
 .Categories-title {
   padding: 5px 0px 0px 12px;
-  font-family: Afacad+Flux;
+  font-family: AfacadFlux;
   font-size: 16px;
   font-weight: 600;
 }
 
 .transactions-title {
   padding: 5px 0px 0px 8px;
-  font-family: Afacad+Flux;
+  font-family: AfacadFlux;
   font-size: 16px;
   font-weight: 600;
 }
 
 .Account-title {
   padding: 5px 0px 0px 12px;
-  font-family: Afacad+Flux;
+  font-family: AfacadFlux;
   font-size: 16px;
   font-weight: 600;
 }
 
-
 /* Top bar styling */
-
-
-
-
 .top-bar {
   position: fixed;
   top: 0;
@@ -150,17 +143,13 @@ body {
 }
 
 .username {
-  font-family: Afacad+Flux;
+  font-family: Poppins;
   font-size: 16px;
   font-weight: 600;
   padding: 10px 8px 8px 4px;
 }
 
-
-
 /* DashBord styling */
-
-
 .upper-section {
   position: absolute;
   left: 220px;
@@ -255,7 +244,6 @@ body {
     padding: 15px;
     flex-direction: column; /* Stacks elements vertically */
   }
-
   .linechart {
     position: absolute;
     display: flex;
@@ -264,7 +252,6 @@ body {
     border-radius: 10px;
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.2);
   }
-
   .doughnut-container {
     position: absolute;
     display: flex;
@@ -273,7 +260,6 @@ body {
     padding: 15px 15px 5px 15px;
   }
 }
-
 /* @media screen and (max-width: 1000px) {
   .side-bar {
     min-width: 75px;
@@ -281,7 +267,6 @@ body {
 
   }  
 } */
-
 .linechart {
   width: 580px;
   display: flex;
@@ -377,7 +362,6 @@ body {
 }
 
 .subcategory {
-
   /* position: relative; */
   left: 10px;
   bottom: 20px;
@@ -439,14 +423,12 @@ body {
   margin-right: 10px;
 }
 
-
-
 .add-transactions-button {
   position: fixed;
   right: 40px;
   bottom: 40px;
   border: none;
-  background-color:transparent;
+  background-color: transparent;
   cursor: pointer;
   z-index: 22;
 }
@@ -455,7 +437,6 @@ body {
   width: 40px;
   height: 40px;
 }
-
 
 /* The Modal (hidden by default) */
 .add-transactions-modal {
@@ -482,49 +463,49 @@ body {
   z-index: 23;
 }
 
-.add-transaction-header{
+.add-transaction-header {
   font-size: 25px;
   font-weight: bold;
   margin: 15px;
 }
 
-.tran-top-section{
+.tran-top-section {
   width: 600px;
   /* box-shadow: 0px 0px 8px rgb(0, 0, 0); */
   margin: 30px 0px 30px 50px;
 }
 
-.tran-type{
+.tran-type {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   /* width: 780px; */
   margin: 5px 0px 0px 0px;
   padding: 0px 8px 0px 8px;
-  background-color: rgb(194, 232, 245) ;
+  background-color: rgb(194, 232, 245);
 }
 
 .transaction-Expense,
 .transaction-Income,
-.transaction-Transfer{
+.transaction-Transfer {
   padding: 5px;
   width: 300px;
   display: flex;
-  justify-content:center;
+  justify-content: center;
 }
 
 .transaction-Expense:hover,
 .transaction-Income:hover,
 .transaction-Transfer:hover {
-  background-color: rgb(160, 218, 238) ;
+  background-color: rgb(160, 218, 238);
 }
 
-.transaction-category{
-  font-weight:410;
+.transaction-category {
+  font-weight: 410;
 }
 
-.tran-amount-section{
+.tran-amount-section {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
   /* width: 794px; */
   height: 100px;
@@ -533,62 +514,63 @@ body {
   box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.2);
 }
 
-.tran-category-icon{
+.tran-category-icon {
   width: 60px;
   height: 60px;
   padding: 20px 60px 20px 60px;
 }
 
-.tran-category-amount{
-  font-family:arial ;
+.tran-category-amount {
+  font-family: arial;
   font-size: 30px;
-  font-weight:bolder;
+  font-weight: bolder;
   padding: 20px 30px 20px 60px;
 }
 
-.tran-bottom-section{
+.tran-bottom-section {
   height: 400px;
   box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
 }
 
-.time-stamp-section{
+.time-stamp-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.time-stamp-leftsection{
+.time-stamp-leftsection {
   display: flex;
   justify-content: center;
   padding: 6px 0px 0px 21px;
 }
-.calender-icon{
-  width: 25px; 
+
+.calender-icon {
+  width: 25px;
   margin: 4px;
   padding: 4px;
   border-radius: 15px;
   background-color: rgb(160, 218, 238);
 }
 
-.time-stamp-today{
+.time-stamp-today {
   font-size: 21px;
   font-weight: bold;
   padding: 4px 0px 0px 12px;
 }
 
-.time-stamp-rightsection{
+.time-stamp-rightsection {
   font-size: 21px;
   font-weight: bold;
   padding: 6px 20px 0px 0px;
 }
 
-.tran-banks-section *{
+.tran-banks-section * {
   display: flex;
-  justify-content:space-between;
-  margin: 12px 6px 0px 8px ;
+  justify-content: space-between;
+  margin: 12px 6px 0px 8px;
   padding: 8px 20px 8px 20px;
   border-radius: 5px;
-  font-weight:410;
+  font-weight: 410;
 }
 
 .down-option,
@@ -604,16 +586,15 @@ body {
   background-color: rgb(196, 228, 238);
 }
 
-.tran-description{
+.tran-description {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 18px;
-
 }
 
-#tran-title{
+#tran-title {
   width: 550px;
   margin: 18px 0px 10px 25px;
   padding: 10px 0px 10px 12px;
@@ -621,14 +602,16 @@ body {
   border-radius: 8px;
 }
 
-#tran-title::placeholder,
-#tran-notes {
-
+#tran-title::-moz-placeholder {
   font-family: poppins;
-  
 }
 
-#tran-notes{
+#tran-title::placeholder,
+#tran-notes {
+  font-family: poppins;
+}
+
+#tran-notes {
   width: 550px;
   height: 100px;
   margin: 0px 0px 0px 25px;
@@ -637,7 +620,7 @@ body {
   border-radius: 8px;
 }
 
-.tran-addtransaction{
+.tran-addtransaction {
   width: 565px;
   margin: 12px 0px 0px 25px;
   padding: 10px 0px 10px 12px;
@@ -662,10 +645,6 @@ body {
   cursor: pointer;
 }
 
-
-
-
-
 /* Addin account using dailog element */
 /* Styling the dialog */
 dialog {
@@ -682,12 +661,12 @@ dialog::backdrop {
   background: rgba(0, 0, 0, 0.5);
 }
 
-.bank-overview-dailog{
+.bank-overview-dailog {
   display: flex;
   flex-direction: column;
 }
 
-.bank-overview-top-section{
+.bank-overview-top-section {
   display: flex;
   justify-content: space-between;
   position: absolute;
@@ -699,24 +678,25 @@ dialog::backdrop {
   /* box-shadow: 0px 0px 5px rgba(10, 108, 255, 0.9); */
 }
 
-.AccouontDialog-back-icon{
+.AccouontDialog-back-icon {
   width: 22px;
   padding: 10px;
 }
+
 .AccouontDialog-editIcon {
   width: 14px;
   height: 14px;
   padding: 10px;
 }
 
-.account-Header-Name{
+.account-Header-Name {
   margin: 35px 5px 15px 5px;
   display: flex;
   font-size: 23px;
   font-weight: 700;
 }
 
-.account-details-seciton{
+.account-details-seciton {
   width: 700px;
   display: flex;
   flex-direction: column;
@@ -727,44 +707,44 @@ dialog::backdrop {
   background-color: #fffcfb;
 }
 
-.acctotal-tag{
+.acctotal-tag {
   font-weight: 600;
   padding-bottom: 5px;
 }
 
-.acc-amount{
+.acc-amount {
   font-family: poppins;
   font-weight: 700;
   padding-bottom: 5px;
 }
 
-.nooftrans{
+.nooftrans {
   font-size: 12px;
   font-weight: 500;
   color: darkgrey;
 }
 
-.time-period-section{
+.time-period-section {
   display: flex;
-  margin :10px;
+  margin: 10px;
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
   background-color: rgb(255, 219, 207);
 }
 
-.timer-icon{
+.timer-icon {
   width: 16px;
   height: 16px;
 }
 
-.time-period-tag{
+.time-period-tag {
   font-size: 12px;
   font-weight: 600;
   padding: 0px 0px 0px 15px;
 }
 
-.exp-in-corr-section{
+.exp-in-corr-section {
   padding: 5px 15px 5px 15px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
   background-color: #fffcfb;
@@ -773,7 +753,7 @@ dialog::backdrop {
 
 .exp-div,
 .inc-div,
-.corr-div{
+.corr-div {
   padding: 5px;
   display: flex;
   flex-direction: row;
@@ -783,14 +763,14 @@ dialog::backdrop {
 
 .exp-div-left,
 .inc-div-left,
-.corr-div-left{
+.corr-div-left {
   display: flex;
   flex-direction: row;
 }
 
 .exp-div-right,
 .inc-div-right,
-.corr-div-right{
+.corr-div-right {
   display: flex;
   justify-content: space-between;
   width: 75%;
@@ -805,40 +785,39 @@ dialog::backdrop {
 
 .exp-count,
 .inc-count,
-.corr-count{
+.corr-count {
   padding: 2px 0px 0px 8px;
   font-size: 10px;
   color: darkgrey;
 }
 
 hr.custom-horizontal-line {
-  width:70%;
+  width: 70%;
   padding: 0px 10px 0px 0px;
   border: none; /* Remove the default border */
-  height: 1px;  /* Set the thickness of the line */
+  height: 1px; /* Set the thickness of the line */
   background-color: rgb(255, 219, 207); /* Set the line color */
   margin: 8px 0; /* Add space around the line */
 }
 
-.exp-amount{
+.exp-amount {
   font-size: 12px;
   font-weight: 650;
   color: rgb(255, 57, 57);
 }
 
-.inc-amount{
+.inc-amount {
   font-size: 12px;
   font-weight: 650;
   color: green;
 }
 
-.corr-amount{
+.corr-amount {
   font-size: 12px;
   font-weight: 650;
 }
 
 /*  Graph styling for accounts   */
-
 .Acc-graph-container {
   position: absolute;
   display: flex;
@@ -861,7 +840,6 @@ hr.custom-horizontal-line {
   border-radius: 10px;
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
 } */
-
 .Acc-doughnut-container {
   width: 700px;
   padding: 20px;
@@ -870,4 +848,4 @@ hr.custom-horizontal-line {
   justify-content: space-between;
   border-radius: 10px;
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
-}
+}/*# sourceMappingURL=Home_main.css.map */

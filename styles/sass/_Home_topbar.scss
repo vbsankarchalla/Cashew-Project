@@ -1,0 +1,30 @@
+/* Top bar styling */
+
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 220px;
+  right: 0;
+  height: 55px;
+  background-color: rgba(191, 235, 252, 0.964);
+  box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.user-details {
+  display: flex;
+  justify-content: right;
+  vertical-align: middle;
+}
+
+.user-dp {
+  width: 30px;
+  padding: 8px 4px 8px 8px;
+}
+
+.username {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 8px 8px 4px;
+}

@@ -1,0 +1,220 @@
+.add-transactions-button {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  border: none;
+  background-color:transparent;
+  cursor: pointer;
+  z-index: 22;
+}
+
+.add-transactions-img {
+  width: 40px;
+  height: 40px;
+}
+
+
+/* The Modal (hidden by default) */
+.add-transactions-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 700px;
+  height: 620px;
+  background-color: rgba(221, 242, 251, 0.958);
+  z-index: 23;
+}
+
+.add-transaction-header{
+  font-size: 25px;
+  font-weight: bold;
+  margin: 15px;
+}
+
+.tran-top-section{
+  width: 600px;
+  /* box-shadow: 0px 0px 8px rgb(0, 0, 0); */
+  margin: 30px 0px 30px 50px;
+}
+
+.tran-type{
+  display: flex;
+  justify-content:center;
+  /* width: 780px; */
+  margin: 5px 0px 0px 0px;
+  padding: 0px 8px 0px 8px;
+  background-color: rgb(194, 232, 245) ;
+}
+
+.transaction-Expense,
+.transaction-Income,
+.transaction-Transfer{
+  padding: 5px;
+  width: 300px;
+  display: flex;
+  justify-content:center;
+}
+
+.transaction-Expense:hover,
+.transaction-Income:hover,
+.transaction-Transfer:hover {
+  background-color: rgb(160, 218, 238) ;
+}
+
+.transaction-category{
+  font-weight:410;
+}
+
+.tran-amount-section{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  /* width: 794px; */
+  height: 100px;
+  margin: 0px 0px 0px 0px;
+  padding: -2px 5px 5px 5px;
+  box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.2);
+}
+
+.tran-category-icon{
+  width: 60px;
+  height: 60px;
+  padding: 20px 60px 20px 60px;
+}
+
+.tran-category-amount{
+  font-family:arial ;
+  font-size: 30px;
+  font-weight:bolder;
+  padding: 20px 30px 20px 60px;
+}
+
+.tran-bottom-section{
+  height: 400px;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+}
+
+.time-stamp-section{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.time-stamp-leftsection{
+  display: flex;
+  justify-content: center;
+  padding: 6px 0px 0px 21px;
+}
+.calender-icon{
+  width: 25px; 
+  margin: 4px;
+  padding: 4px;
+  border-radius: 15px;
+  background-color: rgb(160, 218, 238);
+}
+
+.time-stamp-today{
+  font-size: 21px;
+  font-weight: bold;
+  padding: 4px 0px 0px 12px;
+}
+
+.time-stamp-rightsection{
+  font-size: 21px;
+  font-weight: bold;
+  padding: 6px 20px 0px 0px;
+}
+
+.tran-banks-section *{
+  display: flex;
+  justify-content:space-between;
+  margin: 12px 6px 0px 8px ;
+  padding: 8px 20px 8px 20px;
+  border-radius: 5px;
+  font-weight:410;
+}
+
+.down-option,
+.option1,
+.option2,
+.option3,
+.option4,
+.add-option {
+  font-family: poppins;
+  border: solid;
+  border-width: 0.7px;
+  border-color: rgb(160, 218, 238);
+  background-color: rgb(196, 228, 238);
+}
+
+.tran-description{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 18px;
+
+}
+
+#tran-title{
+  width: 550px;
+  margin: 18px 0px 10px 25px;
+  padding: 10px 0px 10px 12px;
+  border: none;
+  border-radius: 8px;
+}
+
+#tran-title::placeholder,
+#tran-notes {
+
+  font-family: poppins;
+  
+}
+
+#tran-notes{
+  width: 550px;
+  height: 100px;
+  margin: 0px 0px 0px 25px;
+  padding: 10px 0px 10px 12px;
+  border: none;
+  border-radius: 8px;
+}
+
+.tran-addtransaction{
+  width: 565px;
+  margin: 12px 0px 0px 25px;
+  padding: 10px 0px 10px 12px;
+  border: none;
+  border-radius: 8px;
+  font-family: poppins;
+  color: white;
+  background-color: rgb(89, 176, 242);
+}
+
+/* Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  cursor: pointer;
+}
