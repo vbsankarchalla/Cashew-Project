@@ -1,0 +1,333 @@
+body {
+  font-family: poppins;
+  background-color: rgba(221, 242, 251, 0.958);
+}
+
+/* Side bar styling */
+.side-bar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 220px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  background-color: rgba(191, 235, 252, 0.964);
+  z-index: 2;
+}
+
+.sidebar-header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.sidebar-icon {
+  width: 40px;
+  padding: 10px 15px 10px 15px;
+}
+
+.title {
+  flex: 1;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+.icons-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-icon-container,
+.transactions-icon-container,
+.Account-icon-container,
+.Categories-icon-container {
+  margin: 4px 8px 10px 4px;
+  padding: 4px 0px 0px 4px;
+  display: flex;
+  vertical-align: middle;
+  height: 40px;
+  background-color: rgba(221, 242, 251, 0.958);
+  /* rgb(201, 232, 242) */
+  border-radius: 6px;
+  box-shadow: 0px 0px 1px rgba(118, 140, 148, 0.4);
+}
+
+.home-icon-container:hover,
+.transactions-icon-container:hover,
+.Account-icon-container:hover,
+.Categories-icon-container:hover {
+  margin: 4px 8px 10px 4px;
+  padding: 4px 0px 0px 4px;
+  display: flex;
+  vertical-align: middle;
+  height: 40px;
+  background-color: rgb(160, 218, 238);
+  /* rgb(160, 218, 238) */
+  border-radius: 6px;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+}
+
+.home-icon {
+  padding: 5px 0px 5px 8px;
+  width: 30px;
+}
+
+.Categories-icon {
+  padding: 5px 0px 5px 12px;
+  width: 25px;
+  height: 25px;
+}
+
+.transactions-icon {
+  padding: 5px 0px 5px 9px;
+  width: 30px;
+}
+
+.Account-icon {
+  padding: 5px 0px 7px 13px;
+  width: 22px;
+  height: 20px;
+}
+
+.home-title {
+  padding: 8px 0px 5px 8px;
+  font-family: AfacadFlux;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.Categories-title {
+  padding: 5px 0px 0px 12px;
+  font-family: AfacadFlux;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.transactions-title {
+  padding: 5px 0px 0px 8px;
+  font-family: AfacadFlux;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.Account-title {
+  padding: 5px 0px 0px 12px;
+  font-family: AfacadFlux;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Top bar styling */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 220px;
+  right: 0;
+  height: 55px;
+  background-color: rgba(191, 235, 252, 0.964);
+  box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.user-details {
+  display: flex;
+  justify-content: right;
+  vertical-align: middle;
+}
+
+.user-dp {
+  width: 30px;
+  padding: 8px 4px 8px 8px;
+}
+
+.username {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 8px 8px 4px;
+}
+
+/* ------   DashBoard   -------- */
+/* .transactionsPage-div{
+  position:absolute;
+  top: 100px;
+  left: 270px;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+} */
+.transactionsPage-topsection {
+  position: fixed;
+  top: 55px;
+  left: 270px;
+  padding: 25px;
+  border-radius: 5px;
+  z-index: 9;
+  background-color: rgba(221, 242, 251, 0.958);
+}
+
+.Dashboard-header {
+  position: relative;
+  /* top: 100px;
+  left: 300px; */
+  font-size: 25px;
+  font-weight: bold;
+  margin: 15px;
+}
+
+.transactions-months-section * {
+  position: relative;
+}
+
+.b-jan,
+.b-feb,
+.b-mar,
+.b-apr,
+.b-may,
+.b-jun,
+.b-jul,
+.b-aug,
+.b-sep,
+.b-oct,
+.b-nov,
+.b-dec {
+  border: none;
+  margin: 0px 10px 0px 10px;
+  padding: 4px 20px 4px 20px;
+  font-family: poppins;
+  font-weight: 600;
+  border-radius: 6px;
+  background-color: rgba(221, 242, 251, 0.958);
+  transition: 0.15s;
+}
+
+.b-jan:hover,
+.b-feb:hover,
+.b-mar:hover,
+.b-apr:hover,
+.b-may:hover,
+.b-jun:hover,
+.b-jul:hover,
+.b-aug:hover,
+.b-sep:hover,
+.b-oct:hover,
+.b-nov:hover,
+.b-dec:hover {
+  background-color: rgb(160, 218, 238);
+}
+
+.trans-agg-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-radius: 10px;
+  margin: 15px 15px 15px 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.agg-value {
+  display: block;
+  margin: 5px 15px 5px 15px;
+  padding: 5px 15px 5px 15px;
+}
+
+.agg-value_negitive {
+  display: block;
+  margin: 5px 15px 5px 15px;
+  padding: 5px 15px 5px 15px;
+  color: red;
+}
+
+.agg-value_positive {
+  display: block;
+  margin: 5px 15px 5px 15px;
+  padding: 5px 15px 5px 15px;
+  color: rgb(1, 168, 1);
+}
+
+.transaction-indicator {
+  width: 10px;
+  height: 10px;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+
+.transactions-section {
+  /* display: block; */
+  position: relative;
+  top: 300px;
+  left: 270px;
+  width: 1160px;
+  padding: 25px;
+  border-radius: 5px;
+}
+
+.trans-date {
+  margin: 18px 0px 10px 0px;
+  display: flex;
+  padding: 15px 23px 15px 23px;
+  justify-content: space-between;
+  font-family: poppins;
+  color: darkgrey;
+  font-weight: 400;
+}
+
+.transaction-details {
+  margin: 15px 5px 15px 15px;
+}
+
+.one-transaction {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.transaction-category-icon {
+  width: 25px;
+  margin: 5px 0px 10px 10px;
+  padding: 10px;
+  border-radius: 50px;
+  background-color: rgb(238, 162, 154);
+}
+
+.transaction-title {
+  margin: 10px;
+  padding: 0px 0px 0px 20px;
+}
+
+.transaction-amount,
+.negitive-icon {
+  margin: 0px 0px 0px 0px;
+  color: rgb(255, 100, 100);
+  width: 10px;
+  height: 10px;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+
+.trans-count {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  color: darkgrey;
+  font-weight: 401;
+}
+
+.add-transactions-button {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 22;
+}
+
+.add-transactions-img {
+  width: 40px;
+  height: 40px;
+}/*# sourceMappingURL=Transaction_main.css.map */
