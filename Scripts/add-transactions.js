@@ -1,80 +1,137 @@
- // Get the modal, button, and close elements
- const transactions_modal = document.getElementById("new-transactions-Modal");
- const openButton = document.querySelector(".add-transactions-button");
- const closeButton = document.querySelector(".close");
 
- // When the user clicks the button, open the modal
-   openButton.onclick = function() {
-    transactions_modal.style.display = "flex";
- }
+// document.getElementById("new-transactions-Modal").innerHTML =
+// `
+// <!---------------   Add Transactions Modale    -------------------->
 
- // When the user clicks on <span> (x), close the modal
- closeButton.onclick = function() {
-  transactions_modal.style.display = "none";
- }
+//     <div class="add-transactions-modal" id="new-transactions-Modal">
+//       <!--  Transactions Model  -->
+//       <div class="modal-content">
+//         <span class="close">&times;</span>
+//         <span class="add-transaction-header">Add Transaction</span>
+//         <form id="add-transaction-form">
+//           <div class="tran-top-section">
+//             <div class="tran-type">
+//               <div class="transaction-Expense">
+//                 <img
+//                   class="transaction-indicator"
+//                   src="./assets/Icons/dropdown-icon.png"
+//                   alt=""
+//                 />
+//                 <span>Expense</span>
+//               </div>
+//               <div class="transaction-Income">
+//                 <img
+//                   class="transaction-indicator"
+//                   src="./assets/Icons/up-arrow-icon.webp"
+//                   alt=""
+//                 />
+//                 <span>Income</span>
+//               </div>
+//               <div class="transaction-Transfer">
+//                 <img
+//                   class="transaction-indicator"
+//                   src="./assets/Icons/facing arrows-icon.webp"
+//                   alt=""
+//                 />
+//                 <span>Transfer</span>
+//               </div>
+//             </div>
+//             <div class="tran-amount-section">
+//               <img
+//                 class="tran-category-icon"
+//                 src="./assets/Icons/category_icons/Bills & Fees-icon.png"
+//                 alt=""
+//               />
+//               <span class="tran-category-amount">₹294862</span>
+//             </div>
+//           </div>
+//           <div class="tran-bottom-section">
+//             <div class="time-stamp-section">
+//               <div class="time-stamp-leftsection">
+//                 <img
+//                   class="calender-icon"
+//                   src="./assets/Icons/calender-icon.webp"
+//                   alt=""
+//                 />
+//                 <span class="time-stamp-today">Today</span>
+//               </div>
+//               <div>
+//                 <span class="time-stamp-rightsection">Time</span>
+//               </div>
+//             </div>
+//             <div class="tran-banks-section">
+//               <div>
+//                 <button class="down-option">▾</button>
+//                 <button class="option1">HDFC</button>
+//                 <button class="option2">SBI</button>
+//                 <button class="option3">UCO</button>
+//                 <button class="option4">Wallet</button>
+//                 <button class="add-option">+</button>
+//               </div>
+//             </div>
+//             <div class="tran-description">
+//               <input
+//                 type="text"
+//                 id="tran-title"
+//                 name="tran-title"
+//                 placeholder="Title"
+//                 required
+//               />
+//               <input
+//                 type="text"
+//                 id="tran-notes"
+//                 name="tran-notes"
+//                 placeholder="Notes"
+//               />
+//               <a href="http://127.0.0.1:5500/Transactions.html">
+//                 <button class="tran-addtransaction">Add Transaction</button>
+//               </a>
+//             </div>
+//           </div>
+//         </form>
+//       </div>
+//     </div>
+// `;
 
- // When the user clicks anywhere outside of the modal, close it
- window.onclick = function(event) {
-   if (event.target == transactions_modal) {
-    transactions_modal.style.display = "none";
-   }
- }
- 
+// Get the modal, button, and close elements
+const transactions_modal = document.getElementById("new-transactions-dialog");
+const openButton = document.querySelector(".add-transactions-button");
+const closeButton = document.querySelector(".close");
 
-  // Get references to the dialog and buttons
-  const dialog = document.getElementById('AccouontDialog');
-  const openDialogBtn1 = document.getElementById('AccountDialogoption1');
-  const closeDialogBtn = document.getElementById('closeDialogBtn');
+// When the user clicks the button, open the modal
+  openButton.onclick = function() {
+   transactions_modal.style.display = "flex";
+}
 
-    // Open the dialog when the "Open Dialog" button is clicked
-    openDialogBtn1.addEventListener('click', () => {
-      dialog.showModal(); // Opens the dialog as a modal
-    });
+// When the user clicks on <span> (x), close the modal
+closeButton.onclick = function() {
+ transactions_modal.style.display = "none";
+}
 
-    // Close the dialog when the "Close" button is clicked
-    closeDialogBtn.addEventListener('click', () => {
-      dialog.close(); // Closes the dialog
-    });
-    // When the user clicks anywhere outside of the modal, close it
-    // window.onclick = function(event) {
-    //   if (event.target == dialog) {
-    //     dialog.style.display = "none";
-    //   }
-    // }
+// Handle form submission
+const form = document.getElementById('add-transaction-form');
+form.addEventListener('submit', function (event) {
+  event.preventDefault(); // Prevent form from refreshing the page
+});
+let Tran_Title,Tran_Amount;
+document.querySelector('.tran-addtransaction').addEventListener('click', () => {
+  Tran_Title = document.getElementById("tran-title").value;
+  Tran_Amount = document.querySelector('.tran-category-amount').innerHTML;
+  console.log(Tran_Amount);
+  console.log(Tran_Title);
 
-      // Get references to the dialog and buttons
-  const openDialogBtn2 = document.getElementById('AccountDialogoption2');
 
-    // Open the dialog when the "Open Dialog" button is clicked
-    openDialogBtn2.addEventListener('click', () => {
-      dialog.showModal(); // Opens the dialog as a modal
-    });
-
-    // Close the dialog when the "Close" button is clicked
-    closeDialogBtn.addEventListener('click', () => {
-      dialog.close(); // Closes the dialog
-    });
-
-    const AddAccountDialog = document.getElementById('AddAccountDialog');
-    const openAddAccDailog = document.getElementById('AddAccountDialogid');
-    const closeAddAccDialogBtn = document.getElementById('close');
-
-    openAddAccDailog.addEventListener('click',() => {
-      AddAccountDialog.showModal();
-    });
-    closeAddAccDialogBtn.addEventListener('click',() =>{
-      AddAccountDialog.close();
-    });
-
-    
-
-    const editAccountDialog = document.getElementById("EditAccountDialog");
-    const openEditAccDialogBtn = document.getElementById("editAccountBtn");
-    const closeEditAccDialogBtn = document.getElementById('closeDialogBtn');
-
-    openEditAccDialogBtn.addEventListener('click',()=>{
-      editAccountDialog.showModal();
-    });
-    closeEditAccDialogBtn.addEventListener('click',()=>{
-      editAccountDialog.close();
-    })
+document.querySelector(".transaction-details").innerHTML +=  `
+<div class="one-transaction">
+  <div style="display: flex; align-items: center;">
+    <img class="transaction-category-icon" src="./assets/Icons/category_icons/entertainment-icon.png" alt="">
+    <span class="transaction-title">${Tran_Title}</span>
+  </div>
+  <div>
+    <span class="transaction-amount">
+      <img  class="negitive-icon" src="./assets/Icons/dropdown-icon.png" alt="">
+      ${Tran_Amount}</span>
+  </div>
+</div>
+`;
+});
