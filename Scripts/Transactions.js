@@ -1,7 +1,6 @@
 import { handleAmount } from "../utils/money.js";
 
-let Tran_Title, Tran_Amount,Tran_date,TranTotalAmount = 0,TranCount = 0;
-const date = dayjs();
+const timeStamp = dayjs();
 let Transactions = JSON.parse(localStorage.getItem("Transactions")) || [];
 const transactions_modal = document.getElementById("new-transactions-dialog");
 const openButton = document.querySelector(".add-transactions-button");
@@ -29,8 +28,8 @@ document.querySelector(".tran-addtransaction").addEventListener("click", () => {
 
 function addNewTransactionToLocalStorage() {
 
-  Tran_Title = document.getElementById("tran-title").value;
-  Tran_Amount = document.querySelector(".tran-category-amount").innerHTML;
+  const Tran_Title = document.getElementById("tran-title").value;
+  const Tran_Amount = document.querySelector(".tran-category-amount").innerHTML;
   const parsedAmount = handleAmount(Tran_Amount);
   const newTransaction = {
     id: Transactions.length + 1,
@@ -38,7 +37,7 @@ function addNewTransactionToLocalStorage() {
     Tran_Amount: parsedAmount,
     Tran_Type: "deposit",
     Tran_Category: "",
-    Tran_date : date.format("dddd, MMMM DD")
+    Tran_date : timeStamp,
   };
 
   Transactions.unshift(newTransaction);
@@ -48,46 +47,62 @@ function addNewTransactionToLocalStorage() {
 }
 
 function renderTransactions() {
+
+  let TranTotalAmount = 0, TranCount = 0, Tran_Amount = 0;
   let storedTransactions = JSON.parse(localStorage.getItem("Transactions"));
-  let renderedTransactions = ``;
+
   if (storedTransactions && storedTransactions.length > 0) {
-    storedTransactions.forEach((transaction) => {
-      Tran_Title = transaction.Tran_Title;
-      Tran_Amount = transaction.Tran_Amount;
-      TranTotalAmount += Number(Tran_Amount);
-      TranCount += 1;
-      Tran_date = transaction.Tran_date;
-      const fromattedDate = date.format("dddd, MMMM DD");
+    let previousDate = '';
+    let renderedTransactions = '';
+
+    Transactions.forEach(transaction => {
+      const { Tran_Title, Tran_Amount, Tran_date, Tran_Category } = transaction;
+      const fromattedDate = new Date(Tran_date).toLocaleDateString();
+      if (fromattedDate !== previousDate) {
+        if (previousDate !== '') {
+          renderedTransactions += `</div></div>`;
+        }
+        renderedTransactions += `
+          <div class="transaction-of-samedate">
+            <div class="trans-date">
+              <span>${fromattedDate}</span>
+            </div>
+            <div class="transaction-details">
+        `;
+        previousDate = fromattedDate;
+      }
 
       renderedTransactions += `
-      <div class="transaction-of-samedate">
-        <div class="trans-date">
-          <span>${fromattedDate}</span>
-        </div>
-        <div class="transaction-details">
-          <div class="one-transaction">
-            <div style="display: flex; align-items: center;">
-              <img class="transaction-category-icon" src="./assets/Icons/category_icons/entertainment-icon.png" alt="">
-              <span class="transaction-title">${Tran_Title}</span>
-            </div>
-            <div>
-              <span class="transaction-amount">
-                <img  class="negitive-icon" src="./assets/Icons/dropdown-icon.png" alt="">
-                ${Tran_Amount}</span>
-            </div>
+        <div class="one-transaction">
+          <div style="display: flex; align-items: center;">
+            <img class="transaction-category-icon" src="./assets/Icons/category_icons/Shopping-icon.png" alt="">
+            <span class="transaction-title">${Tran_Title}</span>
+          </div>
+          <div>
+            <span class="transaction-amount">
+              <img class="negitive-icon" src="./assets/Icons/dropdown-icon.png" alt="">
+              ₹${Tran_Amount}
+            </span>
           </div>
         </div>
-        <div class="trans-count">
-          <span>Total cash flow: ₹${TranTotalAmount}</span>
-          <span>${TranCount} Transactions</span>
-        </div>
       `;
+      TranTotalAmount += Number(Tran_Amount);
+      TranCount += 1;
     });
-    document.querySelector(".transactions-section").innerHTML =
-      renderedTransactions;
-      console.log('completed..')
+
+    if (previousDate !== '') {
+      renderedTransactions += `
+          </div> <!-- Close .transaction-details -->
+         </div> <!-- Close .transaction-of-samedate -->
+      `;
+    }
+
+    document.querySelector('.transactions-section').innerHTML =  renderedTransactions;
+    // document.querySelector('.transCashFlow').innerHTML = `Total cash flow: ₹${TranTotalAmount}`;
+    // document.querySelector('.transCount').innerHTML = `${TranCount} transactions`;
   } else {
     console.log("No transactions available");
   }
 }
 renderTransactions();
+

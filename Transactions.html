@@ -1,103 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>Transactions</title>
+    <link rel="icon" href="./assets/Cashew-icon-small.png" />
+    <link rel="stylesheet" href="./styles/sass/Transaction_main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <title>Transactions</title>
-  <link rel="icon" href="./assets/Cashew-icon-small.png" />
-  <link rel="stylesheet" href="./styles/sass/Transaction_main.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet" />
-</head>
-
-<body>
-  <!--    Side Bar    -->
-  <div class="side-bar">
-    <div class="sidebar-header-container">
-      <div class="image-container">
-        <img class="sidebar-icon" src="./assets/Cashew-icon-small.png" alt="" />
-      </div>
-      <div class="title-container">
-        <span class="title">Cashew</span>
-      </div>
-    </div>
-    <div class="icons-container">
-      <div class="home-icon-container">
-        <img class="home-icon" src="./assets/Icons/Home-Icon.webp" alt="" />
-        <span class="home-title">Home</span>
-      </div>
-      <div class="transactions-icon-container">
-        <img class="transactions-icon" src="./assets/Icons/transaction-icon.png" alt="" />
-        <span class="transactions-title">Transactions</span>
-      </div>
-      <div class="Categories-icon-container">
-        <img class="Categories-icon" src="./assets/Icons/categories.png" alt="" />
-        <span class="Categories-title">Categories</span>
-      </div>
-      <div class="Account-icon-container">
-        <img class="Account-icon" src="./assets/Icons/account-icon.png" alt="" />
-        <span class="Account-title">Account</span>
-      </div>
-    </div>
-  </div>
-
-  <!--    Top Bar   -->
-
-  <div class="top-bar">
-    <div class="right-section">
-      <div class="user-details">
-        <div>
-          <img class="user-dp" src="./assets/Cashew-icon-small.png" alt="" />
+  <body>
+    <!--    Side Bar    -->
+    <div class="side-bar">
+      <div class="sidebar-header-container">
+        <div class="image-container">
+          <img
+            class="sidebar-icon"
+            src="./assets/Cashew-icon-small.png"
+            alt=""
+          />
         </div>
-        <span class="username">Challa Venkata Bhavani Sankar</span>
+        <div class="title-container">
+          <span class="title">Cashew</span>
+        </div>
+      </div>
+      <div class="icons-container">
+        <div class="home-icon-container">
+          <img class="home-icon" src="./assets/Icons/Home-Icon.webp" alt="" />
+          <span class="home-title">Home</span>
+        </div>
+        <div class="transactions-icon-container">
+          <img
+            class="transactions-icon"
+            src="./assets/Icons/transaction-icon.png"
+            alt=""
+          />
+          <span class="transactions-title">Transactions</span>
+        </div>
+        <div class="Categories-icon-container">
+          <img
+            class="Categories-icon"
+            src="./assets/Icons/categories.png"
+            alt=""
+          />
+          <span class="Categories-title">Categories</span>
+        </div>
+        <div class="Account-icon-container">
+          <img
+            class="Account-icon"
+            src="./assets/Icons/account-icon.png"
+            alt=""
+          />
+          <span class="Account-title">Account</span>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!--  DashBoard   -->
+    <!--    Top Bar   -->
 
-  <!-- <div class="transactionsPage-div"> -->
-  <div class="transactionsPage-topsection">
-    <div class="Dashboard-header">
-      <span>Transactions</span>
-    </div>
-    <div class="transactions-months-section">
-      <button class="b-jan">January</button>
-      <button class="b-feb">February</button>
-      <button class="b-mar">March</button>
-      <button class="b-apr">April</button>
-      <button class="b-may">May</button>
-      <button class="b-jun">June</button>
-      <button class="b-jul">July</button>
-      <button class="b-aug">August</button>
-      <button class="b-sep">September</button>
-      <button class="b-oct">October</button>
-      <button class="b-nov">November</button>
-      <button class="b-dec">December</button>
-    </div>
-    <div class="trans-agg-section">
-      <div class="agg-value_negitive">
-        <img class="transaction-indicator" src="./assets/Icons/dropdown-icon.png" alt="">
-        <span>₹0</span>
-      </div>
-      <div class="agg-value_positive">
-        <img class="transaction-indicator" src="./assets/Icons/up-arrow-icon.webp" alt="">
-        <span>₹0</span>
-      </div>
-      <div class="agg-value">
-        <span>= ₹0</span>
+    <div class="top-bar">
+      <div class="right-section">
+        <div class="user-details">
+          <div>
+            <img class="user-dp" src="./assets/Cashew-icon-small.png" alt="" />
+          </div>
+          <span class="username">Challa Venkata Bhavani Sankar</span>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="transactions-section">
-    
-  </div>
-
-
+    <!--  DashBoard   -->
+    <div class="transactionsPage-div">
+      <div class="transactionsPage-topsection">
+        <div class="Dashboard-header">
+          <span>Transactions</span>
+        </div>
+        <div class="transactions-months-section">
+          <button class="b-jan">January</button>
+          <button class="b-feb">February</button>
+          <button class="b-mar">March</button>
+          <button class="b-apr">April</button>
+          <button class="b-may">May</button>
+          <button class="b-jun">June</button>
+          <button class="b-jul">July</button>
+          <button class="b-aug">August</button>
+          <button class="b-sep">September</button>
+          <button class="b-oct">October</button>
+          <button class="b-nov">November</button>
+          <button class="b-dec">December</button>
+        </div>
+        <div class="trans-agg-section">
+          <div class="agg-value_negitive">
+            <img
+              class="transaction-indicator"
+              src="./assets/Icons/dropdown-icon.png"
+              alt=""
+            />
+            <span>₹0</span>
+          </div>
+          <div class="agg-value_positive">
+            <img
+              class="transaction-indicator"
+              src="./assets/Icons/up-arrow-icon.webp"
+              alt=""
+            />
+            <span>₹0</span>
+          </div>
+          <div class="agg-value">
+            <span>= ₹0</span>
+          </div>
+        </div>
+      </div>
+      <div class="transactions-section"></div>
       <!-- Add Transactions Dialog -->
       <dialog id="new-transactions-dialog">
         <div class="modal-content">
@@ -107,27 +128,49 @@
             <div class="tran-top-section">
               <div class="tran-type">
                 <div class="transaction-Expense">
-                  <img class="transaction-indicator" src="./assets/Icons/dropdown-icon.png" alt="" />
+                  <img
+                    class="transaction-indicator"
+                    src="./assets/Icons/dropdown-icon.png"
+                    alt=""
+                  />
                   <span>Expense</span>
                 </div>
                 <div class="transaction-Income">
-                  <img class="transaction-indicator" src="./assets/Icons/up-arrow-icon.webp" alt="" />
+                  <img
+                    class="transaction-indicator"
+                    src="./assets/Icons/up-arrow-icon.webp"
+                    alt=""
+                  />
                   <span>Income</span>
                 </div>
                 <div class="transaction-Transfer">
-                  <img class="transaction-indicator" src="./assets/Icons/facing arrows-icon.webp" alt="" />
+                  <img
+                    class="transaction-indicator"
+                    src="./assets/Icons/facing arrows-icon.webp"
+                    alt=""
+                  />
                   <span>Transfer</span>
                 </div>
               </div>
               <div class="tran-amount-section">
-                <img class="tran-category-icon" src="./assets/Icons/category_icons/Bills & Fees-icon.png" alt="" />
-                <span contenteditable="true" class="tran-category-amount">₹ </span>
+                <img
+                  class="tran-category-icon"
+                  src="./assets/Icons/category_icons/Bills & Fees-icon.png"
+                  alt=""
+                />
+                <span contenteditable="true" class="tran-category-amount"
+                  >₹
+                </span>
               </div>
             </div>
             <div class="tran-bottom-section">
               <div class="time-stamp-section">
                 <div class="time-stamp-leftsection">
-                  <img class="calender-icon" src="./assets/Icons/calender-icon.webp" alt="" />
+                  <img
+                    class="calender-icon"
+                    src="./assets/Icons/calender-icon.webp"
+                    alt=""
+                  />
                   <span class="time-stamp-today">Today</span>
                 </div>
                 <div>
@@ -145,24 +188,42 @@
                 </div>
               </div>
               <div class="tran-description">
-                <input type="text" id="tran-title" name="tran-title" placeholder="Title" required />
-                <input type="text" id="tran-notes" name="tran-notes" placeholder="Notes" />
+                <input
+                  type="text"
+                  id="tran-title"
+                  name="tran-title"
+                  placeholder="Title"
+                  required
+                />
+                <input
+                  type="text"
+                  id="tran-notes"
+                  name="tran-notes"
+                  placeholder="Notes"
+                />
                 <!-- <a href="http://127.0.0.1:5500/Transactions.html"> -->
-                <button type="submit" class="tran-addtransaction">Add Transaction</button>
+                <button type="submit" class="tran-addtransaction">
+                  Add Transaction
+                </button>
                 <!-- </a> -->
-
               </div>
             </div>
           </div>
         </div>
       </dialog>
-
-
+      <div class="transactionsPage-bottomsection">
+        <div class="transCashFlow trans-count">transCashFlow trans-count</div>
+        <div class="transCount trans-count">transCount trans-count</div>
+      </div>
       <button class="add-transactions-button">
-        <img class="add-transactions-img" alt="Button Image" src="./assets/Icons/plus-icon.png">
+        <img
+          class="add-transactions-img"
+          alt="Button Image"
+          src="./assets/Icons/plus-icon.png"
+        />
       </button>
-      <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
-      <script type="module" src="./Scripts/Transactions.js"></script>
-</body>
-
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script type="module" src="./Scripts/Transactions.js"></script>
+  </body>
 </html>
