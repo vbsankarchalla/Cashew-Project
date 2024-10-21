@@ -114,10 +114,28 @@ transition: 0.15s;
   font-weight: 400;
 }
 
+.tran-selection-options{
+  display: flex;
+  justify-content: space-between;
+  width: 50px;
+  vertical-align: middle;
+}
+
+.tran-Edit-Icon {
+  width: 13px;
+  height: 13px;
+  padding: 3px 0px 0px 0px;
+}
+
+.tran-Delete-Icon {
+  width: 18px;
+  height: 18px;
+}
+
 .transaction-details{
   margin: 15px 5px 15px 15px;
-
 }
+
 .one-transaction{
   padding: 5px;
   display: flex;
@@ -129,6 +147,11 @@ transition: 0.15s;
     background-color: rgb(160, 218, 238);
     }
 }
+
+.item-selected{
+  background-color: rgb(160, 218, 238);
+}
+
 .transaction-category-icon{
   width: 35px;
   margin: 5px 0px 10px 10px;

@@ -48,7 +48,7 @@ function addNewTransactionToLocalStorage() {
 
 function renderTransactions() {
 
-  let TranTotalAmount = 0, TranCount = 0, Tran_Amount = 0;
+  let TranTotalAmount = 0, TranCount = 0, Tran_Amount = 0, transactionId =0;
   let storedTransactions = JSON.parse(localStorage.getItem("Transactions"));
 
   if (storedTransactions && storedTransactions.length > 0) {
@@ -56,8 +56,9 @@ function renderTransactions() {
     let renderedTransactions = '';
 
     Transactions.forEach(transaction => {
-      const { Tran_Title, Tran_Amount, Tran_date, Tran_Category } = transaction;
+      const { Tran_Title, Tran_Amount, Tran_date, Tran_Category} = transaction;
       const fromattedDate = new Date(Tran_date).toLocaleDateString();
+      transactionId = transaction.id;
       if (fromattedDate !== previousDate) {
         if (previousDate !== '') {
           renderedTransactions += `
@@ -68,6 +69,10 @@ function renderTransactions() {
           <div class="transaction-of-samedate">
             <div class="trans-date">
               <span>${fromattedDate}</span>
+              <div class="tran-selection-options">
+                <img class="tran-Edit-Icon" src="./assets/Icons/editpencil-icon.png" alt="">
+                <img class="tran-Delete-Icon" src="./assets/Icons/bin-icon.svg" alt="">
+              </div>
             </div>
             <div class="transaction-details">
             <ul id="transactionList" class="transactionList">
@@ -76,8 +81,7 @@ function renderTransactions() {
       }
 
       renderedTransactions += `
-        <li class="one-transaction" style="">
-        <!-- <input type="checkbox" data-id="${transaction.id}"> -->
+        <li class="one-transaction" data-id="${transaction.id}">
           <div style="display: flex; align-items: center;">
             <img class="transaction-category-icon" src="./assets/Icons/category_icons/Shopping-icon.png" alt="">
             <span class="transaction-title">${Tran_Title}</span>
@@ -110,7 +114,15 @@ function renderTransactions() {
   } else {
     console.log("No transactions available");
   }
+
+  document.querySelectorAll('.one-transaction').forEach(element => {
+    element.addEventListener('click', () =>{
+      element.classList.toggle('item-selected');
+      console.log(transactionId);
+    });
+  });
 }
+
 
 renderTransactions();
 
