@@ -53,7 +53,7 @@ function renderTransactions() {
 
   if (storedTransactions && storedTransactions.length > 0) {
     let previousDate = '';
-    let renderedTransactions = '';
+    let renderedTransactions = '', footer = 'notadded';
 
     Transactions.forEach(transaction => {
       const { Tran_Title, Tran_Amount, Tran_date, Tran_Category } = transaction;
@@ -94,12 +94,14 @@ function renderTransactions() {
       renderedTransactions += `
           </div> <!-- Close .transaction-details -->
          </div> <!-- Close .transaction-of-samedate -->
+         <div class="transCashFlow trans-count"></div>
+         <div class="transCount trans-count"></div>
       `;
     }
 
     document.querySelector('.transactions-section').innerHTML =  renderedTransactions;
-    // document.querySelector('.transCashFlow').innerHTML = `Total cash flow: ₹${TranTotalAmount}`;
-    // document.querySelector('.transCount').innerHTML = `${TranCount} transactions`;
+    document.querySelector('.transCashFlow').innerHTML = `Total cash flow: ₹${TranTotalAmount}`;
+    document.querySelector('.transCount').innerHTML = `${TranCount} transactions`;
   } else {
     console.log("No transactions available");
   }
