@@ -52,22 +52,12 @@ font-weight: 600;
 border-radius: 6px;
 background-color: rgba(221, 242, 251, 0.958);
 transition: 0.15s;
+
+&:hover {
+  background-color: rgb(160, 218, 238);
+  }
 }
 
-.b-jan:hover,
-.b-feb:hover,
-.b-mar:hover,
-.b-apr:hover,
-.b-may:hover,
-.b-jun:hover,
-.b-jul:hover,
-.b-aug:hover,
-.b-sep:hover,
-.b-oct:hover,
-.b-nov:hover,
-.b-dec:hover {
-  background-color: rgb(160, 218, 238);
-}
 
 .trans-agg-section{
   display: flex;
@@ -133,6 +123,11 @@ transition: 0.15s;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-radius: 6px;
+  &:hover {
+    cursor: pointer;
+    background-color: rgb(160, 218, 238);
+    }
 }
 .transaction-category-icon{
   width: 35px;

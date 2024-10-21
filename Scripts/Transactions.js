@@ -53,14 +53,16 @@ function renderTransactions() {
 
   if (storedTransactions && storedTransactions.length > 0) {
     let previousDate = '';
-    let renderedTransactions = '', footer = 'notadded';
+    let renderedTransactions = '';
 
     Transactions.forEach(transaction => {
       const { Tran_Title, Tran_Amount, Tran_date, Tran_Category } = transaction;
       const fromattedDate = new Date(Tran_date).toLocaleDateString();
       if (fromattedDate !== previousDate) {
         if (previousDate !== '') {
-          renderedTransactions += `</div></div>`;
+          renderedTransactions += `
+          </div>
+          </div>`;
         }
         renderedTransactions += `
           <div class="transaction-of-samedate">
@@ -68,12 +70,14 @@ function renderTransactions() {
               <span>${fromattedDate}</span>
             </div>
             <div class="transaction-details">
+            <ul id="transactionList" class="transactionList">
         `;
         previousDate = fromattedDate;
       }
 
       renderedTransactions += `
-        <div class="one-transaction">
+        <li class="one-transaction" style="">
+        <!-- <input type="checkbox" data-id="${transaction.id}"> -->
           <div style="display: flex; align-items: center;">
             <img class="transaction-category-icon" src="./assets/Icons/category_icons/Shopping-icon.png" alt="">
             <span class="transaction-title">${Tran_Title}</span>
@@ -84,7 +88,7 @@ function renderTransactions() {
               ₹${Tran_Amount}
             </span>
           </div>
-        </div>
+        </li>
       `;
       TranTotalAmount += Number(Tran_Amount);
       TranCount += 1;
@@ -92,6 +96,7 @@ function renderTransactions() {
 
     if (previousDate !== '') {
       renderedTransactions += `
+           </ul>
           </div> <!-- Close .transaction-details -->
          </div> <!-- Close .transaction-of-samedate -->
          <div class="transCashFlow trans-count"></div>
@@ -100,11 +105,12 @@ function renderTransactions() {
     }
 
     document.querySelector('.transactions-section').innerHTML =  renderedTransactions;
-    document.querySelector('.transCashFlow').innerHTML = `Total cash flow: ₹${TranTotalAmount}`;
+    document.querySelector('.transCashFlow').innerHTML = `Total cash flow : ₹ ${TranTotalAmount}`;
     document.querySelector('.transCount').innerHTML = `${TranCount} transactions`;
   } else {
     console.log("No transactions available");
   }
 }
+
 renderTransactions();
 

@@ -197,7 +197,6 @@ body {
   background-color: rgba(221, 242, 251, 0.958);
   transition: 0.15s;
 }
-
 .b-jan:hover,
 .b-feb:hover,
 .b-mar:hover,
@@ -277,6 +276,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-radius: 6px;
+}
+.one-transaction:hover {
+  cursor: pointer;
+  background-color: rgb(160, 218, 238);
 }
 
 .transaction-category-icon {
