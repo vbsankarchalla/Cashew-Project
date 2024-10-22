@@ -8,6 +8,7 @@ const closeButton = document.querySelector(".close");
 const addTransactionButton = document.querySelector(".tran-addtransaction");
 const transactionTitle = document.getElementById("tran-title");
 const transactionAmount = document.querySelector(".tran-category-amount");
+let selectedTransactions = [];
 openButton.onclick = function () {
   transactions_modal.style.display = "flex";
   transactionTitle.value = "";
@@ -48,7 +49,7 @@ function addNewTransactionToLocalStorage() {
 
 function renderTransactions() {
 
-  let TranTotalAmount = 0, TranCount = 0, Tran_Amount = 0, transactionId =0;
+  let TranTotalAmount = 0, TranCount = 0, Tran_Amount = 0, selectedItems = 0;
   let storedTransactions = JSON.parse(localStorage.getItem("Transactions"));
 
   if (storedTransactions && storedTransactions.length > 0) {
@@ -56,9 +57,8 @@ function renderTransactions() {
     let renderedTransactions = '';
 
     Transactions.forEach(transaction => {
-      const { Tran_Title, Tran_Amount, Tran_date, Tran_Category} = transaction;
+      const { Tran_Title, Tran_Amount, Tran_date, Tran_Category, id} = transaction;
       const fromattedDate = new Date(Tran_date).toLocaleDateString();
-      transactionId = transaction.id;
       if (fromattedDate !== previousDate) {
         if (previousDate !== '') {
           renderedTransactions += `
@@ -81,7 +81,7 @@ function renderTransactions() {
       }
 
       renderedTransactions += `
-        <li class="one-transaction" data-id="${transaction.id}">
+        <li class="one-transaction" data-id="${id}">
           <div style="display: flex; align-items: center;">
             <img class="transaction-category-icon" src="./assets/Icons/category_icons/Shopping-icon.png" alt="">
             <span class="transaction-title">${Tran_Title}</span>
@@ -117,12 +117,38 @@ function renderTransactions() {
 
   document.querySelectorAll('.one-transaction').forEach(element => {
     element.addEventListener('click', () =>{
+      selectedItems += 1;
+      const tranId = element.dataset.id;
       element.classList.toggle('item-selected');
-      console.log(transactionId);
+      if(element.classList.contains('item-selected')) {
+        selectedTransactions.push(tranId);
+      } else {
+        selectedTransactions.pop(tranId);
+      }
+      updateActionIcons();      
     });
   });
 }
 
+function updateActionIcons() {
+  const dateGroups = document.querySelectorAll('.transaction-of-samedate');
+  dateGroups.forEach(dateGroup => {
+    let tranEditIcon = dateGroup.querySelector('.tran-Edit-Icon');
+    let tranDeleteIcon = dateGroup.querySelector('.tran-Delete-Icon');
+    const selectedItemsInGroup = dateGroup.querySelectorAll('.one-transaction.item-selected').length;
+    if (selectedTransactions.length === 1 && selectedItemsInGroup === 1) {
+      tranEditIcon.style.display = "flex";
+      tranDeleteIcon.style.display = "flex";
+    } else {
+      tranEditIcon.style.display = "none";
+    }
+    if (selectedTransactions.length > 0 ) {
+      tranDeleteIcon.style.display = "flex";
+    } else {
+      tranDeleteIcon.style.display = "none";
+    }
+  });
+}
 
 renderTransactions();
 
