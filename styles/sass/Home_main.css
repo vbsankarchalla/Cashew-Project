@@ -617,7 +617,8 @@ body {
   border-radius: 8px;
 }
 
-.tran-addtransaction {
+.tran-addtransaction,
+.tran-updatetransaction {
   width: 565px;
   margin: 12px 0px 0px 25px;
   padding: 10px 0px 10px 12px;
